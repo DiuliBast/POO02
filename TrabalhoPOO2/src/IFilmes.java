@@ -1,4 +1,4 @@
-public interface IFilme {
+public interface IFilmes {
     //cadastrar
     public abstract boolean addFilme(Filme f);
 

@@ -1,4 +1,4 @@
-public class Foto extends Filme{
+public class Foto extends Filme {
     String fotografo;
     int pessoas;
     String local;

@@ -1,6 +1,6 @@
 import java.io.*;
-import java.util.ArrayList;
-public class Filme implements IFilme {
+
+public class Filme {
 
     private String titulo;
     private String descricao;
@@ -10,9 +10,9 @@ public class Filme implements IFilme {
     private String atoresPrincipais;
     private double duracao;
     private int ano;
-    public static ArrayList <Filme> filmes = new ArrayList<>();
 
-    public Filme (String titulo, String descricao, String genero, String idioma, String diretor, String atoresPrincipais, double duracao, int ano){
+
+    public Filme(String titulo, String descricao, String genero, String idioma, String diretor, String atoresPrincipais, double duracao, int ano){
         this.titulo= titulo;
         this.descricao= descricao;
         this.genero= genero;
@@ -22,7 +22,7 @@ public class Filme implements IFilme {
         this.duracao=duracao;
         this.ano=ano;
     }
-public Filme (){
+public Filme(){
 
 }
     public String getTitulo() {
@@ -119,10 +119,14 @@ public Filme (){
                 FileReader frFilme = new FileReader(arqFilme);
                 BufferedReader brFilme = new BufferedReader(frFilme);
 
-
+// Te
                 while (brFilme.ready()) {
 
+
+
                    filmes.add(f);
+
+
                 }
 
                 brFilme.close();

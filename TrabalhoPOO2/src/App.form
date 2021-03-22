@@ -32,7 +32,7 @@
         </constraints>
         <properties>
           <font name="Times New Roman" size="18"/>
-          <text value="Filmes"/>
+          <text value="Filme"/>
         </properties>
       </component>
       <component id="251e3" class="javax.swing.JButton" binding="músicasButton" default-binding="true">
