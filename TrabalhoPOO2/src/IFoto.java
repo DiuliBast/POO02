@@ -1,6 +1,6 @@
 public interface IFoto {
     //cadastrar
-    public abstract boolean addFoto(Foto fo);
+    public abstract boolean addFoto(Foto foto);
 
     //consultar
     public abstract Foto getFoto (String titulo);

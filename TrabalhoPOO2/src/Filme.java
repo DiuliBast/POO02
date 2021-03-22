@@ -1,3 +1,5 @@
+import java.io.*;
+import java.util.ArrayList;
 public class Filme implements IFilme {
 
     private String titulo;
@@ -8,6 +10,7 @@ public class Filme implements IFilme {
     private String atoresPrincipais;
     private double duracao;
     private int ano;
+    public static ArrayList <Filme> filmes = new ArrayList<>();
 
     public Filme (String titulo, String descricao, String genero, String idioma, String diretor, String atoresPrincipais, double duracao, int ano){
         this.titulo= titulo;
@@ -19,7 +22,6 @@ public class Filme implements IFilme {
         this.duracao=duracao;
         this.ano=ano;
     }
-
 public Filme (){
 
 }
@@ -53,16 +55,105 @@ public Filme (){
     public void setDiretor(String diretor){
         this.diretor=diretor;
     }
-    public String getAtoresprincipais(){
+    public String getAtoresPrincipais(){
         return atoresPrincipais;
     }
-    public void setAtoresprincipais(String atoresprincipais){
-        this.atoresPrincipais= atoresprincipais;
+    public void setAtoresPrincipais(String atoresPrincipais){
+        this.atoresPrincipais= atoresPrincipais;
+    }
+
+    public double getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(double duracao) {
+        this.duracao = duracao;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+
+    public static String tudoString(){
+        String tudo = "";
+        for(Filme f: filmes){
+            tudo = tudo + f.toString() + "\n";
+
+        }
+        return tudo;
+    }
+
+    @Override
+    public String toString() {
+        return "Título = " + titulo +
+                ", Descrição = '" + descricao + '\'' +
+                ", Gênero = '" + genero + '\'' +
+                ", Idioma = " + idioma + '\'' +
+                ", Atores Principais = " + atoresPrincipais + '\'' +
+                ", Duração = " + duracao + '\'' +
+                ", Ano = " + ano + '\'' +
+                ", Diretor = "  + diretor;
     }
 
     @Override
     public boolean addFilme(Filme f) {
-        return false;
+
+        if (f != null) {
+
+            String linha;
+            File arqFilme = new File("/Users/marcus/Downloads/ListaDeFilmes.txt");
+
+            try {
+                if (!arqFilme.exists()) {
+                    arqFilme.createNewFile();
+                }
+            } catch (IOException e) {
+            }
+
+            try {
+                FileReader frFilme = new FileReader(arqFilme);
+                BufferedReader brFilme = new BufferedReader(frFilme);
+
+
+                while (brFilme.ready()) {
+
+                   filmes.add(f);
+                }
+
+                brFilme.close();
+                frFilme.close();
+
+
+            } catch (IOException e) {
+
+            }
+
+            try {
+                FileWriter fw = new FileWriter(arqFilme);
+                BufferedWriter bw = new BufferedWriter(fw);
+                for (Filme fil : filmes) {
+                    linha = f.getTitulo() + ";" + f.getDescricao() + ";" + f.getGenero() + ";" + f.getIdioma() + ";" + f.getDiretor() + ";"
+                            + ";" + f.getAtoresPrincipais() + ";" + f.getDuracao() + ";" + f.getAno();
+                    bw.write(linha);
+                    bw.newLine();
+                    bw.write("Teste");
+                    bw.newLine();
+                }
+                bw.close();
+                fw.close();
+            } catch (IOException e) {
+
+            }
+
+            return true;
+        }
+        else
+            return false;
     }
 
     @Override
