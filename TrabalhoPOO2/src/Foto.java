@@ -1,40 +1,46 @@
-public class Foto extends Mídia implements IFoto{
+public class Foto extends Mídia {
     String fotografo;
     int pessoas;
     String local;
     String data;
 
-    public Foto(String fotografo, int pessoas, String local,String data){
-        this.fotografo=fotografo;
-        this.pessoas=pessoas;
-        this.local=local;
-        this.data=data;
+    public Foto(String fotografo, int pessoas, String local, String data) {
+        this.fotografo = fotografo;
+        this.pessoas = pessoas;
+        this.local = local;
+        this.data = data;
     }
-    public String getFotografo(){
+
+    public String getFotografo() {
         return fotografo;
     }
-    public void setFotografo(String Fotografo){
-        this.fotografo=fotografo;
+
+    public void setFotografo(String Fotografo) {
+        this.fotografo = fotografo;
     }
-    public int getPessoas(){
+
+    public int getPessoas() {
         return pessoas;
     }
-    public void setPessoas(int pessoas){
-        this.pessoas=pessoas;
+
+    public void setPessoas(int pessoas) {
+        this.pessoas = pessoas;
     }
-    public String getLocal(){
+
+    public String getLocal() {
         return local;
     }
-    public void setLocal(String local){
-        this.local= local;
+
+    public void setLocal(String local) {
+        this.local = local;
     }
-    public String getData(){
+
+    public String getData() {
         return data;
     }
-    public void setData(){
-        this.data=data;
+
+    public void setData() {
+        this.data = data;
     }
 
-
 }
-

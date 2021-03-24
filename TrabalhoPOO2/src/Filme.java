@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Filme extends AudioVisual implements IAudiovisual {
+public class Filme extends AudioVisual  {
 
 
 
@@ -34,30 +34,7 @@ public class Filme extends AudioVisual implements IAudiovisual {
     }
 
 
-    @Override
-    public String getDescrição() {
-        return super.getDescrição();
-    }
 
-    @Override
-    public boolean addFilme(Filme f) {
-        return false;
-    }
-
-    @Override
-    public Filme getFilme(String titulo) {
-        return null;
-    }
-
-    @Override
-    public boolean editarFilme(String titulo, String genero) {
-        return false;
-    }
-
-    @Override
-    public boolean removeFime(String titulo) {
-        return false;
-    }
 }
 
 
