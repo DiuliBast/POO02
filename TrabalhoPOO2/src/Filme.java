@@ -1,43 +1,25 @@
 import java.io.*;
 
-public class Filme {
+public class Filme extends AudioVisual implements IAudiovisual {
 
 
-    private String genero;
-    private String idioma;
+
     private String diretor;
     private String atoresPrincipais;
-    private double duracao;
-    private int ano;
-    private Mídia título;
-    private Mídia descricao;
 
-    public Filme(String titulo, String descricao, String genero, String idioma, String diretor, String atoresPrincipais, double duracao, int ano){
-        this.titulo= titulo;
-        this.descricao= descricao;
-        this.genero= genero;
-        this.idioma=idioma;
+
+
+    public Filme( String diretor, String atoresPrincipais){
+
         this.diretor=diretor;
         this.atoresPrincipais=atoresPrincipais;
-        this.duracao=duracao;
-        this.ano=ano;
+
     }
 
     public Filme(){
     }
 
-    public String getGenero(){
-        return genero;
-    }
-    public void setGenero(String genero){
-        this.genero=genero;
-    }
-    public String getIdioma(){
-        return idioma;
-    }
-    public void setIdioma(String idioma){
-        this.idioma=idioma;
-    }
+
     public String getDiretor(){
         return diretor;
     }
@@ -51,23 +33,31 @@ public class Filme {
         this.atoresPrincipais= atoresPrincipais;
     }
 
-    public double getDuracao() {
-        return duracao;
+
+    @Override
+    public String getDescrição() {
+        return super.getDescrição();
     }
 
-    public void setDuracao(double duracao) {
-        this.duracao = duracao;
+    @Override
+    public boolean addFilme(Filme f) {
+        return false;
     }
 
-    public int getAno() {
-        return ano;
+    @Override
+    public Filme getFilme(String titulo) {
+        return null;
     }
 
-    public void setAno(int ano) {
-        this.ano = ano;
+    @Override
+    public boolean editarFilme(String titulo, String genero) {
+        return false;
     }
 
-
+    @Override
+    public boolean removeFime(String titulo) {
+        return false;
+    }
 }
 
 

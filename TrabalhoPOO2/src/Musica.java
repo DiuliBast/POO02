@@ -1,4 +1,4 @@
-public class Musica extends Filme {
+public class Musica extends AudioVisual implements IAudiovisual {
 String autores;
 String interpretes;
 
@@ -18,4 +18,29 @@ public String getInterpretes(){
 public void setInterpretes(String interpretes){
     this.interpretes=interpretes;
 }
+
+    @Override
+    public String getDescrição() {
+        return super.getDescrição();
+    }
+
+    @Override
+    public boolean addMusica(Musica m) {
+        return false;
+    }
+
+    @Override
+    public Musica getMusica(String titulo) {
+        return null;
+    }
+
+    @Override
+    public boolean editarMusica(String titulo, String genero) {
+        return false;
+    }
+
+    @Override
+    public boolean removeMusica(String titulo) {
+        return false;
+    }
 }

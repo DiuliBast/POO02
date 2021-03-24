@@ -1,4 +1,4 @@
-public class Foto extends Filme {
+public class Foto extends Mídia implements IFoto{
     String fotografo;
     int pessoas;
     String local;
@@ -34,4 +34,7 @@ public class Foto extends Filme {
     public void setData(){
         this.data=data;
     }
+
+
 }
+
