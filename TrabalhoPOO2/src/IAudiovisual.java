@@ -9,7 +9,7 @@ public interface IAudiovisual {
     public abstract boolean editarFilme (String titulo, String genero);
 
     //excluir
-    public abstract boolean removeFime(String titulo);
+    public abstract boolean removeFilme(String titulo);
 
     //cadastrar
     public abstract boolean addMusica(Musica m);

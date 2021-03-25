@@ -6,6 +6,7 @@ public Musica (String autores, String interpretes){
     this.autores=autores;
     this.interpretes= interpretes;
 }
+
 public String getAutores(){
     return autores;
 }

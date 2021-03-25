@@ -2,10 +2,18 @@ import java.util.ArrayList;
 
 public class ArrayFotos implements IFoto{
 
-    public static ArrayList<ArrayFotos> listFotos = new ArrayList<>();
+    public static ArrayList<Foto> listFotos = new ArrayList<>();
 
     @Override
     public boolean addFoto(Foto foto) {
+
+        if(foto == null){
+            return false;
+        }
+        if (listFotos.add(foto))
+
+            return true;
+
         return false;
     }
 

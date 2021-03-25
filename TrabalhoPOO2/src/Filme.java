@@ -1,18 +1,17 @@
 import java.io.*;
 
-public class Filme extends AudioVisual  {
-
-
+public class Filme extends AudioVisual {
 
     private String diretor;
     private String atoresPrincipais;
+    private AudioVisual audiovisual;
 
 
-
-    public Filme( String diretor, String atoresPrincipais){
+    public Filme( String diretor, String atoresPrincipais, AudioVisual audiovisual ){
 
         this.diretor=diretor;
         this.atoresPrincipais=atoresPrincipais;
+        this.audiovisual=audiovisual;
 
     }
 

@@ -4,12 +4,12 @@ public class ArrayAudiovisual implements IAudiovisual {
 
 
     public static ArrayList<ArrayAudiovisual> listAudiovisual = new ArrayList<>();
-    public static ArrayList<ArrayAudiovisual> listFilme = new ArrayList<>();
+    public static ArrayList<Filme> listFilme = new ArrayList<Filme>();
     public static ArrayList<ArrayAudiovisual> listMusica = new ArrayList<>();
 
     public static String tudoString() {
         String tudo = "";
-        for (ArrayAudiovisual f : listFilme) {
+        for (Filme f : listFilme) {
             tudo = tudo + f.toString() + "\n";
 
         }
@@ -23,7 +23,6 @@ public class ArrayAudiovisual implements IAudiovisual {
 
             }
             return novo;
-
 
     }
 
@@ -64,7 +63,7 @@ public class ArrayAudiovisual implements IAudiovisual {
     }
 
     @Override
-    public boolean removeFime(String titulo) {
+    public boolean removeFilme(String titulo) {
         return false;
     }
 }
