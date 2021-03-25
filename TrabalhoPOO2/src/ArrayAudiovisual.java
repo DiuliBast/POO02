@@ -2,7 +2,30 @@ import java.util.ArrayList;
 
 public class ArrayAudiovisual implements IAudiovisual {
 
+
     public static ArrayList<ArrayAudiovisual> listAudiovisual = new ArrayList<>();
+    public static ArrayList<ArrayAudiovisual> listFilme = new ArrayList<>();
+    public static ArrayList<ArrayAudiovisual> listMusica = new ArrayList<>();
+
+    public static String tudoString() {
+        String tudo = "";
+        for (ArrayAudiovisual f : listFilme) {
+            tudo = tudo + f.toString() + "\n";
+
+        }
+        return tudo;
+    }
+
+        public static String novoString(){
+            String novo = "";
+            for(ArrayAudiovisual m: listMusica){
+                novo = novo + m.toString() + "\n";
+
+            }
+            return novo;
+
+
+    }
 
     @Override
     public boolean addMusica(Musica m) {
