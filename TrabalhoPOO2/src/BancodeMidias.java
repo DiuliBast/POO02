@@ -65,11 +65,9 @@ public class BancodeMidias {
                     break;
 
                 case 3:
-                    foto = new Foto();
-                    System.out.println("Adicionar Foto");
-                    System.out.println("Insira o título da foto");
-                    foto.setTitulo(entrada.next());
-                    foto.addFoto(foto);
+
+                    System.out.println("Exibir Filmes");
+                    System.out.println(Filme.tudoString());
 
                     break;
 

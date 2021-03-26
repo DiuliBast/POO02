@@ -1,10 +1,22 @@
-public abstract class AudioVisual extends Mídia{
+public abstract class AudioVisual extends Mídia {
 
     private String genero;
     private String idioma;
     private String duração;
     private int ano;
 
+    public AudioVisual(String titulo, String descricao, String caminho, String genero, String idioma, String duração, int ano ) {
+    super(titulo, descricao, caminho);
+        this.genero = genero;
+        this.idioma = idioma;
+        this.duração = duração;
+        this.ano = ano;
+
+    }
+
+    public AudioVisual(){
+
+    }
 
     public String getGenero() {
         return genero;
@@ -38,6 +50,6 @@ public abstract class AudioVisual extends Mídia{
         this.ano = ano;
     }
 
-    public void addFilme(Filme f) {
-    }
 }
+
+

@@ -4,23 +4,18 @@ public interface IMídia {
     public abstract boolean addMidia(Mídia m);
 
     //consultar
-    public abstract Filme getFilme (String titulo);
+    public abstract Mídia getMídia (String titulo);
 
     //editar
-    public abstract boolean editarFilme (String titulo, String genero);
+    public abstract boolean editarMídia (String titulo);
 
     //excluir
-    public abstract boolean removeFilme(String titulo);
+    public abstract boolean removeMídia(String titulo);
 
-    //cadastrar
-    public abstract boolean addMusica(Musica m);
+    //Pesquisa música e filme por genero
+    public abstract Mídia getMusicaFilme(String genero);
 
-    //consultar
-    public abstract Musica getMusica (String titulo);
 
-    //editar
-    public abstract boolean editarMusica (String titulo, String genero);
 
-    //excluir
-    public abstract boolean removeMusica(String titulo);
+
 }

@@ -15,7 +15,6 @@ public class Filme extends AudioVisual {
     public Filme() {
     }
 
-
     public String getDiretor() {
         return diretor;
     }
