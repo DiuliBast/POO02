@@ -8,7 +8,7 @@ public class ExemploArquivo {
             FileOutputStream arquivo = new FileOutputStream("arquivo.txt");
             PrintWriter pr = new PrintWriter(arquivo);
 
-            pr.println("POO");
+            pr.println(Filme.tudoString());
             pr.close();
             arquivo.close();
 

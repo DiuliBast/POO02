@@ -1,6 +1,7 @@
-public interface IAudiovisual {
+public interface IMídia {
+
     //cadastrar
-    public abstract boolean addFilme(Filme f);
+    public abstract boolean addMidia(Mídia m);
 
     //consultar
     public abstract Filme getFilme (String titulo);

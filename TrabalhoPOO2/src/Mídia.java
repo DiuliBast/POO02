@@ -1,8 +1,17 @@
-public abstract class Mídia {
+public abstract class Mídia extends ArrayMidias {
 
     private String titulo;
     private String descricao;
     private String caminho;
+
+    public Mídia(String titulo, String descricao, String caminho) {
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.caminho = caminho;
+    }
+
+    public Mídia(){
+    }
 
     public String getTitulo() {
         return titulo;

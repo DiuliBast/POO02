@@ -3,16 +3,13 @@ public class Foto extends Mídia {
     private int pessoas;
     private String local;
     private String data;
-    private ArrayFotos fotosArray;
 
-    public Foto(String fotografo, int pessoas, String local, String data) {
+    public Foto(String titulo, String descricao, String caminho, String fotografo, int pessoas, String local, String data) {
+        super(titulo, descricao, caminho);
         this.fotografo = fotografo;
         this.pessoas = pessoas;
         this.local = local;
         this.data = data;
-    }
-
-    public Foto(){
     }
 
     public String getFotografo() {
