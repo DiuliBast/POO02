@@ -1,4 +1,6 @@
-public class Musica extends AudioVisual  {
+import java.io.Serializable;
+
+public class Musica extends AudioVisual implements Serializable {
 String autores;
 String interpretes;
 

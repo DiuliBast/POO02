@@ -1,4 +1,6 @@
-public abstract class Mídia extends ArrayMidias {
+import java.io.Serializable;
+
+public abstract class Mídia extends ArrayMidias implements Serializable {
 
     private String titulo;
     private String descricao;

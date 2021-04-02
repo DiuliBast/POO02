@@ -1,4 +1,6 @@
-public class Foto extends Mídia {
+import java.io.Serializable;
+
+public class Foto extends Mídia implements Serializable {
     private String fotografo;
     private int pessoas;
     private String local;

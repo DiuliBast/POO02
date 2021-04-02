@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 
-public class Filme extends AudioVisual {
+public class Filme extends AudioVisual implements Serializable {
 
     private String diretor;
     public ArrayList<String> listAtoresPrincipais = new ArrayList<>();
@@ -26,17 +26,6 @@ public class Filme extends AudioVisual {
 
     public void addAtorPrincipal(String ator) {
         listAtoresPrincipais.add(ator);
-    }
-
-
-    public static String tudoString() {
-
-        String tudo = "";
-        for (ArrayMidias m : listMidias) {
-            tudo = tudo + m.toString() + "\n";
-
-        }
-        return tudo;
     }
 
     public String toString() {

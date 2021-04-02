@@ -7,16 +7,23 @@ public class BancodeMidias {
         Scanner entrada = new Scanner(System.in);
         //ArrayAudiovisual f;
         //ArrayAudiovisual m;
+        ArrayMidias array = new ArrayMidias();
         AudioVisual b;
         Filme f;
-        ExemploArquivo a;
         Foto foto;
         int op;
 
+try {
 
+    array.ler();
+
+} catch (Exception e){
+
+    System.out.println("Erro na leitura do arquivo");
+
+}
         do {
             System.out.println(" Seja bem-vindo ");
-            System.out.println(" 1. Gera arquivo ");
             System.out.println(" 2. Adicionar Filme: ");
             System.out.println(" 3. Exibir Filme: ");
             System.out.println("Informe sua opção");
@@ -25,12 +32,6 @@ public class BancodeMidias {
             switch (op) {
 
                 case 1:
-                    a = new ExemploArquivo();
-                    System.out.println("Gera Arquivo");
-                    a.GeraArquivo();
-                    break;
-
-                case 2:
 
                     f = new Filme();
                     System.out.println("Adicionar filme");
@@ -51,23 +52,27 @@ public class BancodeMidias {
                     System.out.println("Digite o nome do diretor");
                     f.setDiretor(entrada.next());
 
-                    try{
+                    array.addMidia(f);
 
-                    f.addMidia(f);
-                    System.out.println("Terminado!");
+                    try {
 
+                        array.grava();
+
+                    } catch (Exception e) {
+
+                        System.out.println("Erro no arquivo!");
                     }
-                   catch(InputMismatchException e) {
 
-                    System.err.println("DEU ERRO!");
-                   }
+
+
+                    System.out.println("Terminado!");
 
                     break;
 
-                case 3:
+                case 2:
 
-                    System.out.println("Exibir Filmes");
-                    System.out.println(Filme.tudoString());
+                  //  System.out.println("Exibir Filmes");
+                  //  System.out.println(Filme.tudoString());
 
                     break;
 
