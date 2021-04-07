@@ -4,7 +4,6 @@ public class MenuMusica {
     private JButton addMusicaButton;
     private JButton removeMusicaButton;
     private JButton exibirMusicaButton;
-    private JButton exibirButton;
     private JButton consultarButton;
     private JButton editarButton;
     private JButton removerButton;
