@@ -29,15 +29,18 @@ public class Filme extends AudioVisual implements Serializable {
     }
 
     public String toString() {
-        return "Título: " + getTitulo() +
-                "Descrição  = '" + getDescricao() + '\'' +
-                "Caminho =" + getCaminho() + '\'' +
-                " Genero = '" + getGenero() + '\'' +
-                "Idioma  = '" + getIdioma() + '\'' +
-                "Duração  = '" + getDuração() + '\'' +
-                "Ano  = '" + getAno() + '\'' +
-                "Diretor  = '" + diretor;
-
+        return  " " + "\n" +
+                "Título = " + getTitulo() + "\n" +
+                "Descrição = " + getDescricao() + "\n" +
+                "Caminho = " + getCaminho() + "\n" +
+                "Gênero = " + getGenero() + "\n" +
+                "Idioma = " + getIdioma() + "\n" +
+                "Duração = " + getDuração() + "\n" +
+                "Ano = " + getAno() + "\n" +
+                "Diretor = " + diretor + "\n" +
+                " " + "\n" +
+                "----------------------------------- " + "\n" +
+                " ";
 
     }
 }

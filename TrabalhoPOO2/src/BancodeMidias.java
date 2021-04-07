@@ -5,16 +5,14 @@ public class BancodeMidias {
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
-        //ArrayAudiovisual f;
-        //ArrayAudiovisual m;
         ArrayMidias array = new ArrayMidias();
         AudioVisual b;
         Filme f;
         Foto foto;
+        Mídia m;
         int op;
 
 try {
-
     array.ler();
 
 } catch (Exception e){
@@ -24,8 +22,8 @@ try {
 }
         do {
             System.out.println(" Seja bem-vindo ");
-            System.out.println(" 2. Adicionar Filme: ");
-            System.out.println(" 3. Exibir Filme: ");
+            System.out.println(" 1. Adicionar Filme: ");
+            System.out.println(" 2. Exibir Filme: ");
             System.out.println("Informe sua opção");
             op = entrada.nextInt();
 
@@ -55,30 +53,36 @@ try {
                     array.addMidia(f);
 
                     try {
-
                         array.grava();
-
                     } catch (Exception e) {
 
                         System.out.println("Erro no arquivo!");
                     }
 
-
-
-                    System.out.println("Terminado!");
-
                     break;
 
                 case 2:
 
-                  //  System.out.println("Exibir Filmes");
-                  //  System.out.println(Filme.tudoString());
+                    System.out.println("Exibir Mídias");
+                    array.exibir();
+
+                    break;
+
+                case 3:
+
+                    System.out.println("Consultar Mídias");
+                    System.out.println("Informe o título da mídia ");
+                    try {
+                        array.getMídia(entrada.next());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
 
                     break;
 
                 case 0:
 
-                    System.out.println("Você escolheu sair:");
+                    System.out.println("Você escolheu sair: ");
                     break;
             }
 

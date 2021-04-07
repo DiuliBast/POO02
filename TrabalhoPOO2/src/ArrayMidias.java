@@ -1,15 +1,10 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 public class ArrayMidias implements IMídia, Serializable {
 
     private static ArrayList<ArrayMidias> listMidias = new ArrayList<>();
-
-  /*
-    public static ArrayList<ArrayMidias> listAutores = new ArrayList<>();
-    public static ArrayList<ArrayMidias> listInterpretes = new ArrayList<>();
-    public static ArrayList<ArrayMidias> listAtoresPrincipais = new ArrayList<>();
-   */
 
     @Override
     public boolean addMidia(Mídia m) {
@@ -25,6 +20,14 @@ public class ArrayMidias implements IMídia, Serializable {
 
     @Override
     public Mídia getMídia(String titulo) {
+
+        Mídia f = new Filme();
+
+        for (ArrayMidias m : listMidias) {
+
+            return (Mídia) m;
+
+        }
         return null;
     }
 
@@ -44,7 +47,6 @@ public class ArrayMidias implements IMídia, Serializable {
         return null;
     }
 
-
     public String toString() {
         String novo = "";
         for (ArrayMidias m : listMidias) {
@@ -56,25 +58,22 @@ public class ArrayMidias implements IMídia, Serializable {
 
     public void grava() throws Exception {
 
-            System.out.println(listMidias.toString());
-            ObjectOutputStream file = new ObjectOutputStream(new FileOutputStream("midias.bin"));
-            System.out.println("aqui");
-            file.writeObject(listMidias);
-            System.out.println("aqui 2");
-            file.close();
-            System.out.println("aqui 3");
+        ObjectOutputStream file = new ObjectOutputStream(new FileOutputStream("midias.bin"));
+        file.writeObject(listMidias);
+        file.close();
 
-        }
+    }
 
     public void ler() throws Exception {
 
         ObjectInputStream file = new ObjectInputStream(new FileInputStream("midias.bin"));
 
         listMidias = (ArrayList<ArrayMidias>) file.readObject();
-        System.out.println(listMidias.toString());
         file.close();
 
     }
 
+    public void exibir(){
+        System.out.println(listMidias.toString());
     }
-
+}
