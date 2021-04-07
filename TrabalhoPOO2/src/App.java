@@ -29,7 +29,8 @@ public class App extends JFrame {
         filmeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                App menuFilme = new App("FILMES");
+
+                MenuFilme menuFilme = new MenuFilme();
                 menuFilme.setVisible(true);
                 menuFilme.pack();
                 menuFilme.setLocationRelativeTo(null);

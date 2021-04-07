@@ -7,4 +7,7 @@ public class MenuFilme {
     private JButton adicionarButton;
     private JButton removerButton;
     private JLabel firstMainText;
+
+    public MenuFilme() {
+    }
 }
