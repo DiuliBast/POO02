@@ -10,4 +10,8 @@ public class MenuFilme {
 
     public MenuFilme() {
     }
+
+    public void setVisible(boolean b) {
+
+    }
 }

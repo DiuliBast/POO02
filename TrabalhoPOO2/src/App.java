@@ -26,16 +26,10 @@ public class App extends JFrame {
             }
         });
 
-        filmeButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-
-                MenuFilme menuFilme = new MenuFilme();
-                menuFilme.setVisible(true);
-                menuFilme.pack();
-                menuFilme.setLocationRelativeTo(null);
-                menuFilme.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        filmeButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                new MenuFilme().setVisible(true);
+                setVisible(false);
             }
         });
     }
