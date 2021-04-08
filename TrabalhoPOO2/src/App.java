@@ -22,14 +22,24 @@ public class App extends JFrame {
         filmeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                JFrame frame = new MenuFilme("Menufilme");
+                frame.setVisible(true);
+                frame.pack();
+                frame.setLocationRelativeTo(null);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
             }
         });
 
-        filmeButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                new MenuFilme().setVisible(true);
-                setVisible(false);
+        filmeButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                JFrame frame = new MenuFilme("pqp");
+                frame.setVisible(true);
+                frame.pack();
+                frame.setLocationRelativeTo(null);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
             }
         });
     }

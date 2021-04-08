@@ -1,17 +1,19 @@
 import javax.swing.*;
 
-public class MenuFilme {
+public class MenuFilme extends JFrame {
     private JButton addFilmeButton;
     private JButton removeFilmeButton;
     private JButton exibirFilmeButton;
     private JButton adicionarButton;
     private JButton removerButton;
     private JLabel firstMainText;
+    private JPanel menuFilmePanel;
 
-    public MenuFilme() {
-    }
+    public MenuFilme(String title) {
+        super(title);
 
-    public void setVisible(boolean b) {
-
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(menuFilmePanel);
+        this.pack();
     }
 }
