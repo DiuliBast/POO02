@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.event.MouseAdapter;
 
 public class MenuFilme extends JFrame {
     private JButton removeFilmeButton;
@@ -17,4 +18,8 @@ public class MenuFilme extends JFrame {
         this.pack();
 
     }
+   // removeFilmeButton.addMouseListener(new MouseAdapter(){
+
+    }
+    )
 }

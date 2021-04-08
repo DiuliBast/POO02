@@ -12,7 +12,7 @@ public class App extends JFrame {
     private JLabel secondMainText;
     private JLabel firstMainText;
 
-    public App (String title){
+    public App(String title) {
         super(title);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -54,7 +54,24 @@ public class App extends JFrame {
 
             }
         });
-    }
+
+
+        musicaButton.addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            JFrame frame = new MenuMusica("Menu das Músicas ");
+            frame.setVisible(true);
+            frame.pack();
+            frame.setLocationRelativeTo(null);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        }
+    });
+}
+
+
+
+
 
     public static void main(String [] args){
         JFrame frame = new App("Banco de Mídias");
