@@ -7,8 +7,8 @@ import java.awt.event.MouseEvent;
 public class App extends JFrame {
     private JPanel mainPanel;
     private JButton filmeButton;
-    private JButton fotosButton;
-    private JButton músicasButton;
+    private JButton fotoButton;
+    private JButton musicaButton;
     private JLabel secondMainText;
     private JLabel firstMainText;
 
@@ -19,7 +19,7 @@ public class App extends JFrame {
         this.setContentPane(mainPanel);
         this.pack();
 
-        filmeButton.addActionListener(new ActionListener() {
+        /* filmeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = new MenuFilme("Menufilme");
@@ -30,11 +30,23 @@ public class App extends JFrame {
 
             }
         });
-
+*/
         filmeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new MenuFilme("pqp");
+                JFrame frame = new MenuFilme("Menu dos Filmes");
+                frame.setVisible(true);
+                frame.pack();
+                frame.setLocationRelativeTo(null);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            }
+        });
+
+        fotoButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                JFrame frame = new MenuFoto("Menu das fotos");
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);

@@ -1,7 +1,6 @@
 import javax.swing.*;
 
 public class MenuFilme extends JFrame {
-    private JButton addFilmeButton;
     private JButton removeFilmeButton;
     private JButton exibirFilmeButton;
     private JButton adicionarButton;
