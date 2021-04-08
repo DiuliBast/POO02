@@ -13,7 +13,7 @@ public class MenuFilme extends JFrame {
     public MenuFilme() {
 
         this.setTitle("Menu de Filmes");
-        this.setSize(500, 400);
+        this.setSize(800, 600);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(menuFilmePanel);
         this.pack();

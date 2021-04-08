@@ -35,6 +35,7 @@ public class App extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = new MenuFilme();
+                frame.setSize(800,600);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
