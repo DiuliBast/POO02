@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class MenuFilme extends JFrame {
     private JButton removeFilmeButton;
@@ -17,9 +18,18 @@ public class MenuFilme extends JFrame {
         this.setContentPane(menuFilmePanel);
         this.pack();
 
-    }
-   // removeFilmeButton.addMouseListener(new MouseAdapter(){
+        removerButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                JFrame frame = new RemoverFilme();
+                frame.setVisible(true);
+                frame.pack();
+                frame.setLocationRelativeTo(null);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            }
+        });
 
     }
-    )
+
 }
