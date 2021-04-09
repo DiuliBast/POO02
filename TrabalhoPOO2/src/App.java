@@ -68,12 +68,13 @@ public class App extends JFrame {
                 frame.setLocationRelativeTo(null);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+
                 String nome;
                 StringBuilder mensagem = new StringBuilder();
 
                 nome = array.toString();
                 mensagem.append("Bem-vindo ").append(nome).append("!");
-
+                JOptionPane.showMessageDialog(null, mensagem);
 
             }
         });
