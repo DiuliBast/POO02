@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class AdicionarMusica extends JFrame{
     private JLabel firstMainText;
@@ -11,6 +13,7 @@ public class AdicionarMusica extends JFrame{
     private JTextField textField7;
     private JTextField textField8;
     private JPanel AdicionarMusica;
+    private JButton OKButton;
     private ArrayMidias array;
 
     public AdicionarMusica(ArrayMidias array) {
@@ -21,6 +24,26 @@ public class AdicionarMusica extends JFrame{
         this.setContentPane(AdicionarMusica);
        // this.pack();
         this.array = array;
+
+        OKButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                Musica musica = new Musica();
+
+                musica.setTitulo(textField1.getText());
+                musica.setDescricao(textField2.getText());
+
+
+                array.addMidia(musica);
+                System.out.println(array.toString());
+                dispose();
+            }
+
+
+        });
+
+    }
     }
 
-}
+

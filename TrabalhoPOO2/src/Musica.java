@@ -8,8 +8,11 @@ public Musica (String titulo, String descricao, String caminho, String genero, S
     super(titulo, descricao, caminho, genero, idioma, duração,ano);
     this.autores=autores;
     this.interpretes= interpretes;
-}
 
+}
+public Musica (){
+
+}
 public String getAutores(){
     return autores;
 }
@@ -23,5 +26,20 @@ public void setInterpretes(String interpretes){
     this.interpretes=interpretes;
 }
 
+    public String toString() {
+        return  " " + "\n" +
+                "Título = " + getTitulo() + "\n" +
+                "Descrição = " + getDescricao() + "\n" +
+                "Caminho = " + getCaminho() + "\n" +
+                "Gênero = " + getGenero() + "\n" +
+                "Idioma = " + getIdioma() + "\n" +
+                "Duração = " + getDuração() + "\n" +
+                "Ano = " + getAno() + "\n" +
+                "Autores = " + autores + "\n" +
+                "Interpretes = " + interpretes + "\n" +
+                " " + "\n" +
+                "----------------------------------- " + "\n" +
+                " ";
 
+    }
 }
