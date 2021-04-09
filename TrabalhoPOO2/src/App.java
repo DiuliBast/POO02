@@ -12,6 +12,7 @@ public class App extends JFrame {
     private JButton musicaButton;
     private JLabel secondMainText;
     private JLabel firstMainText;
+    private JButton exibirMidiasButton;
     private ArrayMidias array = new ArrayMidias();
 
     public App() {
@@ -55,6 +56,24 @@ public class App extends JFrame {
                 frame.pack();
                 frame.setLocationRelativeTo(null);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            }
+        });
+        exibirMidiasButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                JFrame frame = new ExibirMidias(array);
+                frame.setVisible(true);
+               // frame.pack();
+                frame.setLocationRelativeTo(null);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+                String nome;
+                StringBuilder mensagem = new StringBuilder();
+
+                nome = array.toString();
+                mensagem.append("Bem-vindo ").append(nome).append("!");
+
 
             }
         });

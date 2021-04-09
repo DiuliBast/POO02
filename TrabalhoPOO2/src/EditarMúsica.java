@@ -15,5 +15,6 @@ public class EditarMúsica extends JFrame {
         this.setContentPane(EditarMusica);
         this.pack();
         this.array = array;
+
     }
 }
