@@ -11,14 +11,16 @@ public class AdicionarMusica extends JFrame{
     private JTextField textField7;
     private JTextField textField8;
     private JPanel AdicionarMusica;
+    private ArrayMidias array;
 
-    public AdicionarMusica() {
+    public AdicionarMusica(ArrayMidias array) {
 
         this.setTitle("Adicionar Músicas");
         this.setSize(500, 400);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(AdicionarMusica);
-        this.pack();
+       // this.pack();
+        this.array = array;
     }
 
 }

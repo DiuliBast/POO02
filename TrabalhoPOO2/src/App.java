@@ -3,6 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.lang.reflect.Array;
 
 public class App extends JFrame {
     private JPanel mainPanel;
@@ -11,15 +12,15 @@ public class App extends JFrame {
     private JButton musicaButton;
     private JLabel secondMainText;
     private JLabel firstMainText;
-    private ArrayMidias array = new ArrayMidias();
+    private ArrayMidias array;
 
-    public App(String title) {
-        super(title);
+    public App(ArrayMidias array) {
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setBounds(400,600, 20000, 3000);
+        //this.setBounds(400,600, 20000, 3000);
         this.setContentPane(mainPanel);
         this.pack();
+        this.array = array;
 
         filmeButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -41,7 +42,7 @@ public class App extends JFrame {
         fotoButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new MenuFoto("Menu das fotos");
+                JFrame frame = new MenuFoto(array);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
@@ -54,7 +55,7 @@ public class App extends JFrame {
         musicaButton.addMouseListener(new MouseAdapter() {
         @Override
         public void mouseClicked(MouseEvent e) {
-            JFrame frame = new MenuMusica("Menu das Músicas ");
+            JFrame frame = new MenuMusica(array);
             frame.setVisible(true);
             frame.pack();
             frame.setLocationRelativeTo(null);

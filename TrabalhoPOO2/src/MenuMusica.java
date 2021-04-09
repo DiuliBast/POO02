@@ -11,17 +11,19 @@ public class MenuMusica extends JFrame {
     private JButton adicionarButton;
     private JLabel firstMainText;
     private JPanel MenuMusicaPanel;
+    private ArrayMidias array;
 
-    public MenuMusica (String title){
-        super(title);
+    public MenuMusica (ArrayMidias array){
+
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(MenuMusicaPanel);
         this.pack();
+        this.array = array;
 
         removerButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new RemoverMusica();
+                JFrame frame = new RemoverMusica(array);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
@@ -32,7 +34,7 @@ public class MenuMusica extends JFrame {
         adicionarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new AdicionarMusica();
+                JFrame frame = new AdicionarMusica(array);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
@@ -43,7 +45,7 @@ public class MenuMusica extends JFrame {
         consultarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new ConsultarMúsica();
+                JFrame frame = new ConsultarMúsica(array);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
@@ -55,7 +57,7 @@ public class MenuMusica extends JFrame {
         editarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new EditarMúsica();
+                JFrame frame = new EditarMúsica(array);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
