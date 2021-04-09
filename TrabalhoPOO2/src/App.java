@@ -11,35 +11,28 @@ public class App extends JFrame {
     private JButton musicaButton;
     private JLabel secondMainText;
     private JLabel firstMainText;
+    private ArrayMidias array = new ArrayMidias();
 
     public App(String title) {
         super(title);
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setBounds(400,600, 20000, 3000);
         this.setContentPane(mainPanel);
         this.pack();
 
-        /* filmeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame frame = new MenuFilme("Menufilme");
-                frame.setVisible(true);
-                frame.pack();
-                frame.setLocationRelativeTo(null);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-            }
-        });
-*/
         filmeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new MenuFilme();
+                JFrame frame = new MenuFilme(array);
                 frame.setSize(800,600);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.repaint();
+
+
 
             }
         });

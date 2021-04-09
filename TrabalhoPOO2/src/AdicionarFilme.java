@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+//organizar nomes textField...
 public class AdicionarFilme extends JFrame{
     private JLabel firstMainText;
     private JTextField textField1;
@@ -14,23 +15,33 @@ public class AdicionarFilme extends JFrame{
     private JTextField textField8;
     private JPanel AdicionarFilme;
     private JButton OKButton;
+    private ArrayMidias array;
 
-    public AdicionarFilme() {
+    public AdicionarFilme(ArrayMidias array) {
 
         this.setTitle("Menu de Filmes");
         this.setSize(500, 400);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(AdicionarFilme);
         this.pack();
+        this.array = array;
 
         OKButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new AdicionarFilme();
-                frame.setVisible(true);
-                frame.pack();
-                frame.setLocationRelativeTo(null);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+                Filme f = new Filme();
+
+               f.setTitulo(textField1.getText());
+
+                array.addMidia(f);
+                System.out.println(array.toString());
+               // getContentPane().setVisible(false);
+               // setVisible(false);
+
+                //exibir mensagem
+                /mensage Dialog
+                dispose();
 
             }
         });

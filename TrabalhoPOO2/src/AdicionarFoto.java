@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class AdicionarFoto {
+public class AdicionarFoto extends JFrame {
     private JLabel firstMainText;
     private JTextField textField1;
     private JTextField textField2;
@@ -8,4 +8,14 @@ public class AdicionarFoto {
     private JTextField textField4;
     private JTextField textField5;
     private JTextField textField6;
+    private JPanel adicionarFotoPanel;
+
+    public AdicionarFoto(String title) {
+        super(title);
+
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(adicionarFotoPanel);
+        this.pack();
+
+    }
 }
