@@ -5,13 +5,15 @@ public class EditarMúsica extends JFrame {
     private JTextField textField1;
     private JButton OKButton;
     private JPanel EditarMusica;
+    private ArrayMidias array;
 
-    public EditarMúsica() {
+    public EditarMúsica(ArrayMidias array) {
 
         this.setTitle("Editar Música");
         this.setSize(500, 400);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(EditarMusica);
         this.pack();
+        this.array = array;
     }
 }

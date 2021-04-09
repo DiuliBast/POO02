@@ -4,7 +4,6 @@ import java.awt.event.MouseEvent;
 
 public class MenuMusica extends JFrame {
 
-   ;
     private JButton consultarButton;
     private JButton editarButton;
     private JButton removerButton;
