@@ -9,14 +9,14 @@ public class MenuFoto extends JFrame {
     private JButton removerButton;
     private JLabel firstMainText;
     private JPanel menuFotoPanel;
+    private ArrayMidias array;
 
-    public MenuFoto(String title) {
-        super(title);
+    public MenuFoto(ArrayMidias array) {
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(menuFotoPanel);
         this.pack();
-
+        this.array = array;
 
         removerButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -33,7 +33,7 @@ public class MenuFoto extends JFrame {
         adicionarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new AdicionarFoto("Adicionar Foto");
+                JFrame frame = new AdicionarFoto(array);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);

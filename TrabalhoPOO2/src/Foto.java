@@ -14,6 +14,10 @@ public class Foto extends Mídia implements Serializable {
         this.data = data;
     }
 
+    public Foto (){
+
+    }
+
     public String getFotografo() {
         return fotografo;
     }
@@ -44,6 +48,22 @@ public class Foto extends Mídia implements Serializable {
 
     public void setData() {
         this.data = data;
+    }
+
+
+    public String toString() {
+        return  " " + "\n" +
+                "Título = " + getTitulo() + "\n" +
+                "Descrição = " + getDescricao() + "\n" +
+                "Caminho = " + getCaminho() + "\n" +
+                "Fotógrafo = " + getFotografo() + "\n" +
+                "Pessoas = " + getPessoas() + "\n" +
+                "Local = " + getLocal() + "\n" +
+                "Data = " + getData() +
+                " " + "\n" +
+                "----------------------------------- " + "\n" +
+                " ";
+
     }
 
 }

@@ -33,6 +33,8 @@ public class AdicionarFilme extends JFrame{
                 Filme f = new Filme();
 
                f.setTitulo(textField1.getText());
+               f.setDescricao(textField2.getText());
+
 
                 array.addMidia(f);
                 System.out.println(array.toString());
@@ -40,7 +42,7 @@ public class AdicionarFilme extends JFrame{
                // setVisible(false);
 
                 //exibir mensagem
-                /mensage Dialog
+                //mensage Dialog
                 dispose();
 
             }
