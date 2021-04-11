@@ -23,7 +23,7 @@ public class MenuFilme extends JFrame {
         removerButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new RemoverFilme();
+                JFrame frame = new RemoverFilme(array);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
@@ -57,7 +57,7 @@ public class MenuFilme extends JFrame {
         editarFilmeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new EditarFilme();
+                JFrame frame = new EditarFilme(array);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);

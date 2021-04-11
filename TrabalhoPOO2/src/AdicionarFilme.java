@@ -34,7 +34,12 @@ public class AdicionarFilme extends JFrame{
 
                f.setTitulo(textField1.getText());
                f.setDescricao(textField2.getText());
-
+               f.setGenero(textField3.getText());
+               f.setIdioma(textField4.getText());
+               f.setDuração(textField5.getText());
+               //f.setAno(textField6.getText());
+               f.setDiretor(textField7.getText());
+               //f.setAtoresPrincipais(textField8.getText());
 
                 array.addMidia(f);
                 System.out.println(array.toString());
