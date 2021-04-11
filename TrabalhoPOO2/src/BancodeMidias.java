@@ -63,8 +63,10 @@ try {
 
                 case 2:
 
+                    array = new ArrayMidias();
+
                     System.out.println("Exibir Mídias");
-                    array.exibir();
+                    array.getMídia(entrada.next());
 
                     break;
 

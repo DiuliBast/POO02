@@ -29,6 +29,7 @@ public class AdicionarFilme extends JFrame{
         OKButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+try{
 
                 Filme f = new Filme();
 
@@ -43,6 +44,10 @@ public class AdicionarFilme extends JFrame{
 
                 array.addMidia(f);
 
+}catch (NullPointerException b){
+b.printStackTrace();
+}
+
                 try {
                     array.grava();
                 } catch (Exception a) {
@@ -50,7 +55,6 @@ public class AdicionarFilme extends JFrame{
                     System.out.println("Erro no arquivo!");
                 }
 
-                System.out.println(array.toString());
                 String nome = "Filme Cadastrado com Sucesso!";
                 JOptionPane.showMessageDialog(null, nome);
                 dispose();

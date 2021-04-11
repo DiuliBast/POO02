@@ -19,7 +19,7 @@ public class App extends JFrame {
     public App() {
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setBounds(400, 600, 1000, 1000);
+        this.setSize(800, 600);
         this.setContentPane(mainPanel);
 
         filmeButton.addMouseListener(new MouseAdapter() {
@@ -68,14 +68,12 @@ public class App extends JFrame {
                 frame.setLocationRelativeTo(null);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-               // String nome = array.toString();
-                //JOptionPane.showMessageDialog(null, nome);
-
             }
         });
     }
 
     public static void main(String[] args) {
+
         ArrayMidias array = new ArrayMidias();
 
         try {

@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public abstract class Mídia extends ArrayMidias implements Serializable {
+public class Mídia extends ArrayMidias implements Serializable {
 
     private String titulo;
     private String descricao;

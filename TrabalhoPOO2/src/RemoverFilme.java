@@ -23,18 +23,20 @@ public class RemoverFilme extends JFrame {
             public void mouseClicked(MouseEvent e) {
 
                 Filme f = new Filme();
-
-                System.out.println(" Remover Mídia ");
-                System.out.println("Informe o título da mídia");
+                String msgError = "";
+                String msgSucess;
 
                 if(f.removeMídia(textField1.getText())){
 
-                    System.out.println("Produto removido com sucesso! ");
+                    msgSucess = "Filme removido com Sucesso!";
+                    JOptionPane.showMessageDialog(null, msgSucess);
+                    dispose();
 
                 }
                 else
-
-                    System.out.println("Nao removeu negah, tente denovo :D");
+                    msgError = "O filme não foi removido :(";
+                    JOptionPane.showMessageDialog(null, msgError);
+                    dispose();
             }
         });
     }
