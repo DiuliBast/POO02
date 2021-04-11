@@ -46,7 +46,7 @@ try {
                     System.out.println("Insira a duração o filme");
                     f.setDuração(entrada.next());
                     System.out.println("Insira o ano o filme");
-                    f.setAno(entrada.nextInt());
+                    f.setAno(entrada.next());
                     System.out.println("Digite o nome do diretor");
                     f.setDiretor(entrada.next());
 

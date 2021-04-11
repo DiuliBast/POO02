@@ -4,7 +4,7 @@ public class Musica extends AudioVisual implements Serializable {
 String autores;
 String interpretes;
 
-public Musica (String titulo, String descricao, String caminho, String genero, String idioma, String duração, int ano,String autores, String interpretes){
+public Musica (String titulo, String descricao, String caminho, String genero, String idioma, String duração, String ano, String autores, String interpretes){
     super(titulo, descricao, caminho, genero, idioma, duração,ano);
     this.autores=autores;
     this.interpretes= interpretes;

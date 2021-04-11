@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.concurrent.ExecutionException;
 
 public class ArrayMidias implements IMídia, Serializable {
 
@@ -39,6 +38,7 @@ public class ArrayMidias implements IMídia, Serializable {
 
     @Override
     public boolean removeMídia(String titulo) {
+
         return false;
     }
 
@@ -73,7 +73,9 @@ public class ArrayMidias implements IMídia, Serializable {
 
     }
 
-    public void exibir(){
+    public String exibir(){
+
         System.out.println(listMidias.toString());
+        return null;
     }
 }

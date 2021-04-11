@@ -37,17 +37,22 @@ public class AdicionarFilme extends JFrame{
                f.setGenero(textField3.getText());
                f.setIdioma(textField4.getText());
                f.setDuração(textField5.getText());
-               //f.setAno(textField6.getText());
+               f.setAno(textField6.getText());
                f.setDiretor(textField7.getText());
                //f.setAtoresPrincipais(textField8.getText());
 
                 array.addMidia(f);
-                System.out.println(array.toString());
-               // getContentPane().setVisible(false);
-               // setVisible(false);
 
-                //exibir mensagem
-                //mensage Dialog
+                try {
+                    array.grava();
+                } catch (Exception a) {
+
+                    System.out.println("Erro no arquivo!");
+                }
+
+                System.out.println(array.toString());
+                String nome = "Filme Cadastrado com Sucesso!";
+                JOptionPane.showMessageDialog(null, nome);
                 dispose();
 
             }

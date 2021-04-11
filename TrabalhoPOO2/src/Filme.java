@@ -6,7 +6,7 @@ public class Filme extends AudioVisual implements Serializable {
     private String diretor;
     public ArrayList<String> listAtoresPrincipais = new ArrayList<>();
 
-    public Filme(String titulo, String descricao, String caminho, String genero, String idioma, String duração, int ano, String diretor) {
+    public Filme(String titulo, String descricao, String caminho, String genero, String idioma, String duração, String ano, String diretor) {
         super(titulo, descricao, caminho, genero, idioma, duração, ano);
         this.diretor = diretor;
 
