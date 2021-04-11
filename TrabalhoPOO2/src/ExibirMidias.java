@@ -7,6 +7,8 @@ public class ExibirMidias extends JFrame {
     private JScrollBar scrollBar1;
     private JPanel exibirMidiasPanel;
     private JLabel areaDeExibicao;
+    private JPanel areaExibicao;
+    private JButton exibirButton;
     private ArrayMidias array;
 
     public ExibirMidias(ArrayMidias array) {
@@ -18,17 +20,28 @@ public class ExibirMidias extends JFrame {
         // this.pack();
         this.array = array;
 
+        exibirButton.addMouseListener(new MouseAdapter() {
+
+            public void mouseClicked (MouseEvent e){
+
+                areaDeExibicao.setText(array.toString());
+            }
+        });
+
     }
 
-        public void exibeMidias() {
+    public void exibeMidias() {
 
-            String nome;
-            StringBuilder mensagem = new StringBuilder();
+        String nome;
+        StringBuilder mensagem = new StringBuilder();
 
-            nome = array.toString();
-            mensagem.append("Bem-vindo ").append(nome).append("!");
-            JOptionPane.showMessageDialog(null, mensagem);
-        }
+        nome = array.toString();
+        mensagem.append("Bem-vindo ").append(nome).append("!");
+        JOptionPane.showMessageDialog(null, mensagem);
     }
+
+
+}
+
 
 

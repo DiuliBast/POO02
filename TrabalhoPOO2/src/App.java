@@ -62,21 +62,20 @@ public class App extends JFrame {
         exibirMidiasButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-               // JFrame frame = new ExibirMidias(array);
-                //frame.setVisible(true);
-               // frame.pack();
-                //frame.setLocationRelativeTo(null);
-                //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                JFrame frame = new ExibirMidias(array);
+                frame.setVisible(true);
+                frame.pack();
+                frame.setLocationRelativeTo(null);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-                String nome = array.toString();
-                JOptionPane.showMessageDialog(null, nome);
+               // String nome = array.toString();
+                //JOptionPane.showMessageDialog(null, nome);
 
             }
         });
     }
 
     public static void main(String[] args) {
-
         ArrayMidias array = new ArrayMidias();
 
         try {

@@ -39,6 +39,12 @@ public class ArrayMidias implements IMídia, Serializable {
     @Override
     public boolean removeMídia(String titulo) {
 
+        if(listMidias.remove(getMídia(titulo)))
+
+            return true;
+
+        else
+
         return false;
     }
 
