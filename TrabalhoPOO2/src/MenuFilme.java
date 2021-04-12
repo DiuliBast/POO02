@@ -45,7 +45,7 @@ public class MenuFilme extends JFrame {
         consultaButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new ConsultarFilme();
+                JFrame frame = new ConsultarFilme(array);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);

@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 
-public class Filme extends AudioVisual implements Serializable {
+public class Filme extends AudioVisual implements Serializable, IMídia {
 
     private String diretor;
     public ArrayList<String> listAtoresPrincipais = new ArrayList<>();
@@ -29,7 +29,7 @@ public class Filme extends AudioVisual implements Serializable {
     }
 
     public String toString() {
-        return  " " + "\n" +
+        return " " + "\n" +
                 "Título = " + getTitulo() + "\n" +
                 "Descrição = " + getDescricao() + "\n" +
                 "Caminho = " + getCaminho() + "\n" +
@@ -43,6 +43,6 @@ public class Filme extends AudioVisual implements Serializable {
                 " ";
 
     }
-}
 
+}
 

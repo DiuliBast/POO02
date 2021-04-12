@@ -3,8 +3,7 @@ import java.util.ArrayList;
 
 public class ArrayMidias implements IMídia, Serializable {
 
-    private static ArrayList<ArrayMidias> listMidias = new ArrayList<>();
-    private Mídia m;
+    public static ArrayList<Mídia> listMidias = new ArrayList<>();
 
     @Override
     public boolean addMidia(Mídia m) {
@@ -19,19 +18,19 @@ public class ArrayMidias implements IMídia, Serializable {
     }
 
     @Override
-    public boolean getMídia(String titulo) {
+    public Mídia getMídia(String titulo) {
 
-        Mídia m = new Mídia();
+        Filme f = new Filme();
 
-        for (ArrayMidias mi : listMidias) {
-            if (m.getTitulo == titulo) {
-                System.out.println(m.toString());
-                return true;
+        for (Mídia m : listMidias) {
+            if (m.getTitulo() == titulo) {
 
-            } else
+                System.out.println(m);
+                return m;
 
-        }
-        return false;
+            } else return null;
+
+        } return null;
     }
 
 
@@ -92,7 +91,7 @@ public class ArrayMidias implements IMídia, Serializable {
 
             ObjectInputStream file = new ObjectInputStream(new FileInputStream("midias.bin"));
 
-            listMidias = (ArrayList<ArrayMidias>) file.readObject();
+            listMidias = (ArrayList<Mídia>) file.readObject();
             file.close();
 
         }
