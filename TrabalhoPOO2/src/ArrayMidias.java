@@ -44,8 +44,18 @@ public class ArrayMidias implements IMídia, Serializable {
 
     @Override
     public boolean editarMídia(String titulo) {
-        return true;
+        Mídia  m = getMídia(titulo);
+        if(m != null){
+            m.setTitulo(m.getTitulo());
+            return true;
+
+        }else
+
+            return false;
     }
+
+
+
 
 
     @Override
@@ -102,5 +112,6 @@ public class ArrayMidias implements IMídia, Serializable {
         System.out.println(listMidias.toString());
         return null;
     }
+
 }
 
