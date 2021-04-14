@@ -33,19 +33,6 @@ public class ArrayMidias implements IMídia, Serializable {
         } return null;
     }
 
-
-
-/*
-        Mídia
-
-        for (ArrayMidias m : listMidias) {
-
-            return (Mídia) m;
-
-        }
-        return null;
-    }
-*/
         @Override
         public boolean editarMídia (String titulo){
 
