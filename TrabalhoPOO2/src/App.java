@@ -101,10 +101,11 @@ public class App extends JFrame {
             array.ler();
         } catch (Exception e) {
             System.out.println("Erro na leitura do arquivo");
+
         }
 
         JFrame frame = new App();
         frame.setVisible(true);
-    }
 
+    }
 }

@@ -49,7 +49,9 @@ public class EditarFilme extends JFrame {
             public void mouseClicked(MouseEvent e) {
 
                String titulo = array.getMídia(textField1.getText()).toString();
-                textArea1.setText(titulo);
+               textArea1.setText(titulo);
+
+
 
             }
         });
