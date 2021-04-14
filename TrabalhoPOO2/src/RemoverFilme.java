@@ -26,19 +26,19 @@ public class RemoverFilme extends JFrame {
                 String msgError = "";
                 String msgSucess;
 
-                if(f.removeMídia(textField1.getText())){
+                if (array.removeMídia(textField1.getText())) {
 
-                    msgSucess = "Filme removido com Sucesso!";
+                    msgSucess = "Midia removida com sucesso!";
                     JOptionPane.showMessageDialog(null, msgSucess);
                     dispose();
 
-                }
-                else
-                    msgError = "O filme não foi removido :(";
+                } else {
+                    msgError = "A midia não foi removida :(";
                     JOptionPane.showMessageDialog(null, msgError);
                     dispose();
+                }
             }
         });
     }
-    }
+}
 

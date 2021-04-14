@@ -1,5 +1,9 @@
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.io.*;
 import java.util.ArrayList;
+
+import static javax.swing.UIManager.get;
 
 public class ArrayMidias implements IMídia, Serializable {
 
@@ -20,8 +24,6 @@ public class ArrayMidias implements IMídia, Serializable {
     @Override
     public Mídia getMídia(String titulo) {
 
-        Filme f = new Filme();
-
         for (Mídia m : listMidias) {
             if (m.getTitulo() == titulo) {
 
@@ -30,63 +32,68 @@ public class ArrayMidias implements IMídia, Serializable {
 
             } else return null;
 
-        } return null;
+        }
+        return null;
     }
 
-        @Override
-        public boolean editarMídia (String titulo){
+    @Override
+    public boolean editarMídia(String titulo) {
 
+        return false;
+    }
+
+    @Override
+    public boolean removeMídia(String titulo) {
+        try {
+            for (Mídia m : listMidias) {
+                if (m.getTitulo().equals(titulo)) {
+                    listMidias.remove(m);
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
             return false;
         }
-
-        @Override
-        public boolean removeMídia (String titulo){
-
-            if (listMidias.remove(getMídia(titulo)))
-
-                return true;
-
-            else
-
-                return false;
-        }
-
-        @Override
-        public Mídia getMusicaFilme (String genero){
-
-            return null;
-        }
-
-        public String toString () {
-            String novo = "";
-            for (ArrayMidias m : listMidias) {
-                novo = novo + m.toString() + "\n";
-
-            }
-            return novo;
-        }
-
-        public void grava () throws Exception {
-
-            ObjectOutputStream file = new ObjectOutputStream(new FileOutputStream("midias.bin"));
-            file.writeObject(listMidias);
-            file.close();
-
-        }
-
-        public void ler () throws Exception {
-
-            ObjectInputStream file = new ObjectInputStream(new FileInputStream("midias.bin"));
-
-            listMidias = (ArrayList<Mídia>) file.readObject();
-            file.close();
-
-        }
-
-        public String exibir () {
-
-            System.out.println(listMidias.toString());
-            return null;
-        }
+        return false;
     }
+
+    @Override
+    public Mídia getMusicaFilme(String genero) {
+
+        return null;
+    }
+
+    public String toString() {
+        String novo = "";
+        for (ArrayMidias m : listMidias) {
+            novo = novo + m.toString() + "\n";
+
+        }
+        return novo;
+    }
+
+    public void grava() throws Exception {
+
+        ObjectOutputStream file = new ObjectOutputStream(new FileOutputStream("midias.bin"));
+        file.writeObject(listMidias);
+        file.close();
+
+    }
+
+    public void ler() throws Exception {
+
+        ObjectInputStream file = new ObjectInputStream(new FileInputStream("midias.bin"));
+
+        listMidias = (ArrayList<Mídia>) file.readObject();
+        file.close();
+
+    }
+
+    public String exibir() {
+
+        System.out.println(listMidias.toString());
+        return null;
+    }
+}
 
