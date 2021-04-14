@@ -6,7 +6,7 @@ public class MenuFilme extends JFrame {
     private JButton consultaButton;
     private JButton editarFilmeButton;
     private JButton adicionarButton;
-    private JButton removerButton;
+    //private JButton removerButton;
     private JLabel firstMainText;
     private JPanel menuFilmePanel;
     private JButton VOLTARButton;
@@ -21,17 +21,6 @@ public class MenuFilme extends JFrame {
         this.pack();
         this.array = array;
 
-        removerButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                JFrame frame = new RemoverFilme(array);
-                frame.setVisible(true);
-                frame.pack();
-                frame.setLocationRelativeTo(null);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-            }
-        });
         adicionarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {

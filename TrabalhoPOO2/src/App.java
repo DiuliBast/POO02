@@ -15,6 +15,7 @@ public class App extends JFrame {
     private JLabel firstMainText;
     private JButton exibirMidiasButton;
     private JButton SAIRButton;
+    private JButton removerMídiaButton;
     private ArrayMidias array = new ArrayMidias();
 
     public App() {
@@ -72,6 +73,18 @@ public class App extends JFrame {
             }
         });
 
+        removerMídiaButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                JFrame frame = new RemoverMidia(array);
+                frame.setVisible(true);
+                frame.pack();
+                frame.setLocationRelativeTo(null);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            }
+        });
+
         SAIRButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -84,14 +97,10 @@ public class App extends JFrame {
     public static void main(String[] args) {
 
         ArrayMidias array = new ArrayMidias();
-
         try {
             array.ler();
-
         } catch (Exception e){
-
             System.out.println("Erro na leitura do arquivo");
-
         }
 
         JFrame frame = new App();

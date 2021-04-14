@@ -48,6 +48,7 @@ public class ArrayMidias implements IMídia, Serializable {
             for (Mídia m : listMidias) {
                 if (m.getTitulo().equals(titulo)) {
                     listMidias.remove(m);
+                    grava();
                     return true;
                 }
             }

@@ -6,7 +6,7 @@ public class MenuMusica extends JFrame {
 
     private JButton consultarButton;
     private JButton editarButton;
-    private JButton removerButton;
+    //private JButton removerButton;
     private JButton adicionarButton;
     private JLabel firstMainText;
     private JPanel MenuMusicaPanel;
@@ -19,7 +19,7 @@ public class MenuMusica extends JFrame {
         this.pack();
         this.array = array;
 
-        removerButton.addMouseListener(new MouseAdapter() {
+      /*  removerButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = new RemoverMusica(array);
@@ -30,6 +30,8 @@ public class MenuMusica extends JFrame {
 
             }
         });
+
+       */
         adicionarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {

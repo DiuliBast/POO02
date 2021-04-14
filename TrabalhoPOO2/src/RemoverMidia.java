@@ -3,14 +3,14 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.lang.reflect.Array;
 
-public class RemoverFilme extends JFrame {
+public class RemoverMidia extends JFrame {
     private JLabel firstMainText;
     private JTextField textField1;
     private JButton okButton;
     private JPanel RemoveFilme;
     private ArrayMidias array;
 
-    public RemoverFilme(ArrayMidias array) {
+    public RemoverMidia(ArrayMidias array) {
 
         this.setTitle("Menu de Filmes");
         this.setSize(500, 400);

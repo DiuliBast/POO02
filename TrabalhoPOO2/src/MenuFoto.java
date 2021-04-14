@@ -6,7 +6,7 @@ public class MenuFoto extends JFrame {
     private JButton editarButton;
     private JButton adicionarButton;
     private JButton consultarButton;
-    private JButton removerButton;
+   // private JButton removerButton;
     private JLabel firstMainText;
     private JPanel menuFotoPanel;
     private ArrayMidias array;
@@ -18,7 +18,7 @@ public class MenuFoto extends JFrame {
         this.pack();
         this.array = array;
 
-        removerButton.addMouseListener(new MouseAdapter() {
+       /* removerButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = new RemoverFoto("Remover Foto");
@@ -29,6 +29,8 @@ public class MenuFoto extends JFrame {
 
             }
         });
+
+        */
 
         adicionarButton.addMouseListener(new MouseAdapter() {
             @Override
