@@ -5,7 +5,6 @@ public class ConsultarMúsica extends JFrame {
     private JTextField textField1;
     private JButton OKButton;
     private JPanel ConsultarMusica;
-    private JTextArea textArea1;
     private ArrayMidias array;
 
     public ConsultarMúsica(ArrayMidias array) {
