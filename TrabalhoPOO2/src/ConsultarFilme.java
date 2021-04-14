@@ -21,7 +21,7 @@ public class ConsultarFilme extends JFrame {
         okButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new ConsultarFilme(array);
+                JFrame frame = new ExibirFilme(array);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
