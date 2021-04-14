@@ -40,7 +40,7 @@ try{
                f.setDuração(textField5.getText());
                f.setAno(textField6.getText());
                f.setDiretor(textField7.getText());
-               //f.setAtoresPrincipais(textField8.getText());
+               f.setAtoresPrincipais(textField8.getText());
 
                 array.addMidia(f);
 

@@ -2,11 +2,11 @@ import java.io.Serializable;
 
 public class Foto extends Mídia implements Serializable {
     private String fotografo;
-    private int pessoas;
+    private String pessoas;
     private String local;
     private String data;
 
-    public Foto(String titulo, String descricao, String caminho, String fotografo, int pessoas, String local, String data) {
+    public Foto(String titulo, String descricao, String caminho, String fotografo, String pessoas, String local, String data) {
         super(titulo, descricao, caminho);
         this.fotografo = fotografo;
         this.pessoas = pessoas;
@@ -26,11 +26,11 @@ public class Foto extends Mídia implements Serializable {
         this.fotografo = fotografo;
     }
 
-    public int getPessoas() {
+    public String getPessoas() {
         return pessoas;
     }
 
-    public void setPessoas(int pessoas) {
+    public void setPessoas(String pessoas) {
         this.pessoas = pessoas;
     }
 
@@ -46,7 +46,7 @@ public class Foto extends Mídia implements Serializable {
         return data;
     }
 
-    public void setData() {
+    public void setData(String text) {
         this.data = data;
     }
 

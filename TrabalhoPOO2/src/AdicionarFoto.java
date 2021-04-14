@@ -32,7 +32,10 @@ public class AdicionarFoto extends JFrame {
 
                 foto.setTitulo(textField1.getText());
                 foto.setDescricao(textField2.getText());
-
+                foto.setFotografo(textField3.getText());
+                foto.setPessoas(textField4.getText());
+                foto.setLocal(textField5.getText());
+                foto.setData(textField6.getText());
 
                 array.addMidia(foto);
                 System.out.println(array.toString());

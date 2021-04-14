@@ -1,5 +1,3 @@
-import jdk.swing.interop.SwingInterOpUtils;
-
 import java.io.*;
 import java.util.ArrayList;
 
@@ -38,9 +36,10 @@ public class ArrayMidias implements IMídia, Serializable {
 
     @Override
     public boolean editarMídia(String titulo) {
-
-        return false;
+        return true;
     }
+
+
 
     @Override
     public boolean removeMídia(String titulo) {

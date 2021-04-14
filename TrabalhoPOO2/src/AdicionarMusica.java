@@ -33,7 +33,10 @@ public class AdicionarMusica extends JFrame{
 
                 musica.setTitulo(textField1.getText());
                 musica.setDescricao(textField2.getText());
-
+                musica.setGenero(textField3.getText());
+                musica.setIdioma(textField4.getText());
+                musica.setDuração(textField5.getText());
+                musica.setAno(textField6.getText());
 
                 array.addMidia(musica);
                 System.out.println(array.toString());
