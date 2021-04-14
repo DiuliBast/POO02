@@ -21,24 +21,31 @@ public class ArrayMidias implements IMídia, Serializable {
 
     @Override
     public Mídia getMídia(String titulo) {
+        try {
+            System.out.println("*"+titulo+"*");
+            for (Mídia m : listMidias) {
+                System.out.println(m.getTitulo());
+                if (m.getTitulo().equals(titulo)) {
 
-        for (Mídia m : listMidias) {
-            if (m.getTitulo() == titulo) {
+                    System.out.println("encontrei"+m);
+                    return m;
+                }
+            }
 
-                System.out.println(m);
-                return m;
-
-            } else return null;
-
+        } catch (NullPointerException e) {
+            System.out.println(e.getMessage());
+            return null;
         }
+
+
         return null;
     }
+
 
     @Override
     public boolean editarMídia(String titulo) {
         return true;
     }
-
 
 
     @Override

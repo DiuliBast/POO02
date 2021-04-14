@@ -20,11 +20,12 @@ public class ConsultarFilme extends JFrame {
         this.array = array;
 
         okButton.addMouseListener(new MouseAdapter() {
-            @Override
+
             public void mouseClicked(MouseEvent e) {
-                Filme f= new Filme();
+               // Filme f= new Filme();
 
-
+               // String titulo = array.getMídia(textField1.getText()).toString();
+                //System.out.println(titulo);
                 textArea1.setText(array.getMídia(textField1.getText()).toString());
 
 
