@@ -22,12 +22,12 @@ public class ArrayMidias implements IMídia, Serializable {
     @Override
     public Mídia getMídia(String titulo) {
         try {
-            System.out.println("*"+titulo+"*");
+            System.out.println("*" + titulo + "*");
             for (Mídia m : listMidias) {
                 System.out.println(m.getTitulo());
                 if (m.getTitulo().equals(titulo)) {
 
-                    System.out.println("encontrei"+m);
+                    System.out.println("encontrei" + m);
                     return m;
                 }
             }
@@ -43,16 +43,16 @@ public class ArrayMidias implements IMídia, Serializable {
 
 
     @Override
-    public boolean editarMídia(String titulo) {
-        Mídia  m = getMídia(titulo);
-        if(m != null){
-            m.setTitulo(m.getTitulo());
+    public boolean editarMídia(String titulo, Mídia nova) {
+        for (Mídia m : listMidias) {
+            if (m.getTitulo().equals(titulo)) ;
+            int index = listMidias.indexOf(m);
+            listMidias.set(index, nova);
             return true;
-
-        }else
-
+        }
             return false;
-    }
+}
+
 
 
 

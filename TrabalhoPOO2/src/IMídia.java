@@ -7,7 +7,7 @@ public interface IMídia {
     public abstract Mídia getMídia (String titulo);
 
     //editar
-    public abstract boolean editarMídia (String titulo);
+    public abstract boolean editarMídia (String titulo, Mídia nova);
 
     //excluir
     public abstract boolean removeMídia(String titulo);

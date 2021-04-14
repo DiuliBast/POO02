@@ -47,7 +47,7 @@ public class MenuFoto extends JFrame {
         consultarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new ConsultarFoto("Consultar Foto");
+                JFrame frame = new ConsultarFoto(array);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
