@@ -99,7 +99,7 @@ public class App extends JFrame {
         ArrayMidias array = new ArrayMidias();
         try {
             array.ler();
-        } catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Erro na leitura do arquivo");
         }
 

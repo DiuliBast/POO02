@@ -6,7 +6,6 @@ public class MenuMusica extends JFrame {
 
     private JButton consultarButton;
     private JButton editarButton;
-    //private JButton removerButton;
     private JButton adicionarButton;
     private JLabel firstMainText;
     private JPanel MenuMusicaPanel;
@@ -19,19 +18,6 @@ public class MenuMusica extends JFrame {
         this.pack();
         this.array = array;
 
-      /*  removerButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                JFrame frame = new RemoverMusica(array);
-                frame.setVisible(true);
-                frame.pack();
-                frame.setLocationRelativeTo(null);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-            }
-        });
-
-       */
         adicionarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {

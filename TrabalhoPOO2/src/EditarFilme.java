@@ -15,9 +15,10 @@ public class EditarFilme extends JFrame {
     private JTextField textField7;
     private JTextField textField8;
     private JTextField textField9;
+    private JButton procurarButton;
+    private JTextArea textArea1;
     private ArrayMidias array;
     Filme f;
-
 
 
     public EditarFilme(ArrayMidias array) {
@@ -27,13 +28,12 @@ public class EditarFilme extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(EditarFilme);
         this.pack();
-
+        this.array = array;
 
 
         OKButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
 
                 JFrame frame = new EditarFilme(f);
                 frame.setVisible(true);
@@ -44,10 +44,17 @@ public class EditarFilme extends JFrame {
             }
         });
 
+        procurarButton.addMouseListener(new MouseAdapter() {
 
+            public void mouseClicked(MouseEvent e) {
 
-        }
+                array.getMídia(textField1.getText()).toString();
+
+            }
+        });
 
     }
+
+}
 
 
