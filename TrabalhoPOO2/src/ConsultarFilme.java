@@ -7,6 +7,7 @@ public class ConsultarFilme extends JFrame {
     private JTextField textField1;
     private JButton okButton;
     private JPanel ConsultarFilme;
+    private JTextArea textArea1;
     private ArrayMidias array;
 
     public ConsultarFilme(ArrayMidias array) {
@@ -21,17 +22,21 @@ public class ConsultarFilme extends JFrame {
         okButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new ExibirFilme(array);
-                frame.setVisible(true);
-                frame.pack();
-                frame.setLocationRelativeTo(null);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                Filme f= new Filme();
+
+
+                textArea1.setText(array.getMídia(textField1.getText()).toString());
+
+
+
+                    }
+                });
 
             }
-        });
+
 
 
 
     }
-    }
+
 
