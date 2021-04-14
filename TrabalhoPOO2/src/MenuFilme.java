@@ -9,6 +9,7 @@ public class MenuFilme extends JFrame {
     private JButton removerButton;
     private JLabel firstMainText;
     private JPanel menuFilmePanel;
+    private JButton VOLTARButton;
     private ArrayMidias array;
 
     public MenuFilme(ArrayMidias array) {
@@ -66,6 +67,14 @@ public class MenuFilme extends JFrame {
             }
         });
 
-    }
+        VOLTARButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                dispose();
 
+            }
+
+        });
+
+    }
 }

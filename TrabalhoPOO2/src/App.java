@@ -14,6 +14,7 @@ public class App extends JFrame {
     private JLabel secondMainText;
     private JLabel firstMainText;
     private JButton exibirMidiasButton;
+    private JButton SAIRButton;
     private ArrayMidias array = new ArrayMidias();
 
     public App() {
@@ -67,6 +68,14 @@ public class App extends JFrame {
                 frame.pack();
                 frame.setLocationRelativeTo(null);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            }
+        });
+
+        SAIRButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                dispose();
 
             }
         });

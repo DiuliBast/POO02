@@ -30,6 +30,8 @@ public class ConsultarFilme extends JFrame {
             }
         });
 
+
+
     }
     }
 
