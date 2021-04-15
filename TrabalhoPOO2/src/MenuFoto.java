@@ -60,7 +60,7 @@ public class MenuFoto extends JFrame {
         editarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                JFrame frame = new EditarFoto("Editar Foto");
+                JFrame frame = new EditarFoto(array);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);

@@ -9,6 +9,7 @@ public class MenuMusica extends JFrame {
     private JButton adicionarButton;
     private JLabel firstMainText;
     private JPanel MenuMusicaPanel;
+    private JButton sairButton;
     private ArrayMidias array;
 
     public MenuMusica (ArrayMidias array){

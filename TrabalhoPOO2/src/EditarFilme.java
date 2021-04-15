@@ -20,6 +20,7 @@ public class EditarFilme extends JFrame {
 
     private JButton procurarButton;
     private JTextArea textArea1;
+    private JButton sairButton;
 
     private ArrayMidias array;
     Filme f;

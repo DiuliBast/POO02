@@ -7,14 +7,18 @@ public class EditarMúsica extends JFrame {
     private JTextField textField1;
     private JButton OKButton;
     private JPanel EditarMusica;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JTextField textField6;
-    private JTextField textField7;
-    private JTextField textField8;
-    private JTextField textField9;
+    private JTextField textNewTitulo;
+    private JTextField textNewDescricao;
+    private JTextField textNewCaminho;
+    private JTextField textNewGenero;
+    private JTextField textNewIdioma;
+    private JTextField textNewDuracao;
+    private JTextField textNewAno;
+    private JTextField textNewAutores;
+    private JTextField textNewInterpretes;
+    private JButton procurarButton;
+    private JTextArea textArea1;
+    private JButton sairButton;
     private ArrayMidias array;
 
     public EditarMúsica(ArrayMidias array) {
@@ -42,6 +46,13 @@ public class EditarMúsica extends JFrame {
 
             }
         });
+
+        procurarButton.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+
+                String titulo = array.getMídia(textField1.getText()).toString();
+                textArea1.setText(titulo);
+
 
 
 

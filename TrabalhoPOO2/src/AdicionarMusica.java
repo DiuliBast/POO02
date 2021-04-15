@@ -4,16 +4,17 @@ import java.awt.event.MouseEvent;
 
 public class AdicionarMusica extends JFrame{
     private JLabel firstMainText;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JTextField textField6;
-    private JTextField textField7;
-    private JTextField textField8;
+    private JTextField textTitulo;
+    private JTextField textDescricao;
+    private JTextField textGenero;
+    private JTextField textIdioma;
+    private JTextField textDuracao;
+    private JTextField textAno;
+    private JTextField textAutores;
+    private JTextField textInterpretes;
     private JPanel AdicionarMusica;
     private JButton OKButton;
+    private JTextField textCaminho;
     private ArrayMidias array;
 
     public AdicionarMusica(ArrayMidias array) {
@@ -31,12 +32,16 @@ public class AdicionarMusica extends JFrame{
 
                 Musica musica = new Musica();
 
-                musica.setTitulo(textField1.getText());
-                musica.setDescricao(textField2.getText());
-                musica.setGenero(textField3.getText());
-                musica.setIdioma(textField4.getText());
-                musica.setDuração(textField5.getText());
-                musica.setAno(textField6.getText());
+                musica.setTitulo(textTitulo.getText());
+                musica.setDescricao(textDescricao.getText());
+                musica.setCaminho(textCaminho.getText());
+                musica.setGenero(textGenero.getText());
+                musica.setIdioma(textIdioma.getText());
+                musica.setDuração(textDuracao.getText());
+                musica.setAno(textAno.getText());
+                musica.setAutores(textAutores.getText());
+                musica.setInterpretes(textInterpretes.getText());
+
 
                 array.addMidia(musica);
                 System.out.println(array.toString());

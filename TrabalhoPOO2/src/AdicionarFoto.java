@@ -4,14 +4,15 @@ import java.awt.event.MouseEvent;
 
 public class AdicionarFoto extends JFrame {
     private JLabel firstMainText;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JTextField textField6;
+    private JTextField textTitulo;
+    private JTextField textDescricao;
+    private JTextField textFotografo;
+    private JTextField textPessoas;
+    private JTextField textLocal;
+    private JTextField textData;
     private JPanel adicionarFotoPanel;
     private JButton OKButton;
+    private JTextField textCaminho;
     private ArrayMidias array;
 
 
@@ -30,12 +31,13 @@ public class AdicionarFoto extends JFrame {
 
                 Foto foto = new Foto();
 
-                foto.setTitulo(textField1.getText());
-                foto.setDescricao(textField2.getText());
-                foto.setFotografo(textField3.getText());
-                foto.setPessoas(textField4.getText());
-                foto.setLocal(textField5.getText());
-                foto.setData(textField6.getText());
+                foto.setTitulo(textTitulo.getText());
+                foto.setDescricao(textDescricao.getText());
+                foto.setCaminho(textCaminho.getText());
+                foto.setFotografo(textFotografo.getText());
+                foto.setPessoas(textPessoas.getText());
+                foto.setLocal(textLocal.getText());
+                foto.setData(textData.getText());
 
                 array.addMidia(foto);
                 System.out.println(array.toString());
