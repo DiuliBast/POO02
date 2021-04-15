@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 public class EditarFilme extends JFrame {
     private JLabel firstMainText;
@@ -21,7 +22,7 @@ public class EditarFilme extends JFrame {
     Filme f;
 
 
-    public EditarFilme(ArrayMidias array) {
+    public EditarFilme(ArrayMidias array) throws Exception {
 
         this.setTitle("Consulta de Filmes");
         this.setSize(500, 400);
@@ -34,15 +35,21 @@ public class EditarFilme extends JFrame {
         OKButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                Filme f = new Filme();
+                String novotitulo = textField2.getText();
+                String novadescricao = textField3.getText();
+                f.setTitulo(novotitulo);
+                f.setDescricao(novadescricao);
+              //  f.setDuração(novaduracao);
 
-                JFrame frame = new EditarFilme(f);
-                frame.setVisible(true);
-                frame.pack();
-                frame.setLocationRelativeTo(null);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                array.editarMídia("sss",f);
+                //resultado do campo
+                    System.out.println(f.getTitulo());
+                    System.out.println("midia alterada com sucesso");
 
             }
         });
+
 
         procurarButton.addMouseListener(new MouseAdapter() {
 
@@ -55,6 +62,8 @@ public class EditarFilme extends JFrame {
 
             }
         });
+
+
 
     }
 

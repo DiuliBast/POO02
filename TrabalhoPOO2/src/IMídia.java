@@ -12,6 +12,8 @@ public interface IMídia {
     //excluir
     public abstract boolean removeMídia(String titulo);
 
+   // public abstract boolean editar(String titulo, Mídia nova);
+
     //Pesquisa música e filme por genero
     public abstract Mídia getMusicaFilme(String genero);
 

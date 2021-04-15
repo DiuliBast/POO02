@@ -7,6 +7,7 @@ public class ArrayMidias implements IMídia, Serializable {
 
     public static ArrayList<Mídia> listMidias = new ArrayList<>();
 
+
     @Override
     public boolean addMidia(Mídia m) {
 
@@ -44,36 +45,50 @@ public class ArrayMidias implements IMídia, Serializable {
 
     @Override
     public boolean editarMídia(String titulo, Mídia nova) {
+
+
+        //if (titulo.equals(null)) {
+            //throw new IllegalArgumentException("titulo nao pode ser nulo");
+
+       // int index = listMidias.indexOf(titulo);
+
+
+       // if (nova == null) ;
+
         for (Mídia m : listMidias) {
-            if (m.getTitulo().equals(titulo)) ;
-            int index = listMidias.indexOf(m);
-            listMidias.set(index, nova);
+            if (m.getTitulo().equals(titulo)) {
+                System.out.println(m.getTitulo());
+                m.setTitulo(nova.getTitulo());
+                m.setDescricao(nova.getDescricao());
+                System.out.println(m.getTitulo());
+              // m.setTitulo(toString());
+                System.out.println("encontrou");
+
             return true;
-        }
-            return false;
-}
-
-
-
-
-
-
-    @Override
-    public boolean removeMídia(String titulo) {
-        try {
-            for (Mídia m : listMidias) {
-                if (m.getTitulo().equals(titulo)) {
-                    listMidias.remove(m);
-                    grava();
-                    return true;
-                }
             }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        }
+return false;
+    }
+
+
+
+        @Override
+        public boolean removeMídia (String titulo){
+            try {
+                for (Mídia m : listMidias) {
+                    if (m.getTitulo().equals(titulo)) {
+                        listMidias.remove(m);
+                        grava();
+                        return true;
+                    }
+                }
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                return false;
+            }
             return false;
         }
-        return false;
-    }
+
 
     @Override
     public Mídia getMusicaFilme(String genero) {
