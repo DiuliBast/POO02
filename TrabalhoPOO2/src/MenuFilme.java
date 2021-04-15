@@ -47,6 +47,7 @@ public class MenuFilme extends JFrame {
         editarFilmeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+
                 JFrame frame = null;
                 try {
                     frame = new EditarFilme(array);
