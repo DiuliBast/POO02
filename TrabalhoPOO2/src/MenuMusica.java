@@ -54,10 +54,19 @@ public class MenuMusica extends JFrame {
             }
         });
 
+        sairButton.addMouseListener(new MouseAdapter() {
+            public void mouseClicked (MouseEvent e){
+                dispose();
+
+            }
+
+        });
+    }
+
     }
 
 
-    }
+
 
 
 

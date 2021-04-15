@@ -34,15 +34,26 @@ public class EditarMúsica extends JFrame {
         OKButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                Musica musica = new Musica();
-                String novotitulo = textField2.getText();
-                String novadescricao = textField3.getText();
-                musica.setTitulo(novotitulo);
-                musica.setDescricao(novadescricao);
-                array.editarMídia("ttt",musica);
+
+                Musica musica = new Musica(
+
+                        textNewTitulo.getText(),
+                        textNewDescricao.getText(),
+                        textNewCaminho.getText(),
+                        textNewGenero.getText(),
+                        textNewIdioma.getText(),
+                        textNewDuracao.getText(),
+                        textNewAno.getText(),
+                        textNewAutores.getText(),
+                        textNewInterpretes.getText()
+
+                );
+
+                array.editarMídia(musica.getTitulo(), musica);
                 //resultado do campo
                 System.out.println(musica.getTitulo());
-                System.out.println("midia alterada com sucesso");
+                //System.out.println("midia alterada com sucesso");
+                JOptionPane.showMessageDialog(null,"Mídia editada com sucesso");
 
             }
         });
@@ -56,5 +67,17 @@ public class EditarMúsica extends JFrame {
 
 
 
+            }
+        });
+        sairButton.addMouseListener(new MouseAdapter() {
+            public void mouseClicked (MouseEvent e){
+                dispose();
+
+            }
+
+        });
     }
-}
+
+    }
+
+

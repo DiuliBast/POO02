@@ -6,7 +6,7 @@ public class Foto extends Mídia implements Serializable {
     private String local;
     private String data;
 
-    public Foto(String titulo, String descricao, String caminho, String fotografo, String pessoas, String local, String data) {
+    public Foto(String titulo, String descricao, String caminho, String fotografo, String pessoas, String local,String data) {
         super(titulo, descricao, caminho);
         this.fotografo = fotografo;
         this.pessoas = pessoas;
@@ -14,7 +14,7 @@ public class Foto extends Mídia implements Serializable {
         this.data = data;
     }
 
-    public Foto (){
+    public Foto(){
 
     }
 
@@ -22,7 +22,7 @@ public class Foto extends Mídia implements Serializable {
         return fotografo;
     }
 
-    public void setFotografo(String Fotografo) {
+    public void setFotografo(String fotografo) {
         this.fotografo = fotografo;
     }
 
@@ -46,7 +46,7 @@ public class Foto extends Mídia implements Serializable {
         return data;
     }
 
-    public void setData(String text) {
+    public void setData(String data) {
         this.data = data;
     }
 

@@ -42,6 +42,11 @@ public class AdicionarFoto extends JFrame {
                 array.addMidia(foto);
                 System.out.println(array.toString());
                 dispose();
+
+                String nome = "Foto Cadastrada com Sucesso!";
+                JOptionPane.showMessageDialog(null, nome);
+                dispose();
+
             }
 
 

@@ -100,9 +100,16 @@ public class EditarFilme extends JFrame {
             }
         });
 
+        sairButton.addMouseListener(new MouseAdapter() {
+            public void mouseClicked (MouseEvent e){
+                dispose();
 
+            }
+
+        });
+    }
     }
 
-}
+
 
 

@@ -46,6 +46,11 @@ public class AdicionarMusica extends JFrame{
                 array.addMidia(musica);
                 System.out.println(array.toString());
                 dispose();
+
+                String nome = "Música Cadastrada com Sucesso!";
+                JOptionPane.showMessageDialog(null, nome);
+                dispose();
+
             }
 
 
