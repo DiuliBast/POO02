@@ -39,29 +39,33 @@
           <text value="Novo Título:"/>
         </properties>
       </component>
-      <component id="28389" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+      <component id="28389" class="javax.swing.JTextField" binding="textNewTitulo">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="6bead" class="javax.swing.JLabel">
         <constraints>
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Nova Descrição:"/>
+          <text value="Novo Caminho:"/>
         </properties>
       </component>
-      <component id="593be" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+      <component id="593be" class="javax.swing.JTextField" binding="textNewCaminho">
         <constraints>
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="bd1e6" class="javax.swing.JLabel">
         <constraints>
@@ -71,13 +75,15 @@
           <text value="Novo Gênero:"/>
         </properties>
       </component>
-      <component id="d18bf" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+      <component id="d18bf" class="javax.swing.JTextField" binding="textNewGenero">
         <constraints>
           <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="85f88" class="javax.swing.JLabel">
         <constraints>
@@ -87,13 +93,15 @@
           <text value="Novo Idioma:"/>
         </properties>
       </component>
-      <component id="5f4de" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+      <component id="5f4de" class="javax.swing.JTextField" binding="textNewIdioma">
         <constraints>
           <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="8bbe0" class="javax.swing.JLabel">
         <constraints>
@@ -103,13 +111,15 @@
           <text value="Nova Duração:"/>
         </properties>
       </component>
-      <component id="ef501" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+      <component id="ef501" class="javax.swing.JTextField" binding="textNewDuracao">
         <constraints>
           <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="58c51" class="javax.swing.JLabel">
         <constraints>
@@ -119,13 +129,15 @@
           <text value="Novo Ano"/>
         </properties>
       </component>
-      <component id="479cf" class="javax.swing.JTextField" binding="textField7" default-binding="true">
+      <component id="479cf" class="javax.swing.JTextField" binding="textNewAno">
         <constraints>
           <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="4d712" class="javax.swing.JLabel">
         <constraints>
@@ -135,44 +147,50 @@
           <text value="Novo Diretor:"/>
         </properties>
       </component>
-      <component id="687f3" class="javax.swing.JTextField" binding="textField8" default-binding="true">
+      <component id="687f3" class="javax.swing.JTextField" binding="textNewDiretor">
         <constraints>
           <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="b722c" class="javax.swing.JLabel">
         <constraints>
           <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Novo Caminho"/>
+          <text value="Novos Atores Principais:"/>
         </properties>
       </component>
-      <component id="a67f" class="javax.swing.JTextField" binding="textField9" default-binding="true">
+      <component id="a67f" class="javax.swing.JTextField" binding="textNewAP">
         <constraints>
           <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
-      <component id="b9c09" class="javax.swing.JTextField" binding="textField10" default-binding="true">
+      <component id="b9c09" class="javax.swing.JTextField" binding="textNewDescricao">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="8dc3c" class="javax.swing.JLabel">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Atores Principais"/>
+          <text value="Nova Descrição:"/>
         </properties>
       </component>
       <component id="a950e" class="javax.swing.JButton" binding="OKButton" default-binding="true">

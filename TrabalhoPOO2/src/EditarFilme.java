@@ -1,24 +1,26 @@
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.ArrayList;
 
 public class EditarFilme extends JFrame {
     private JLabel firstMainText;
     private JTextField textField1;
     private JButton OKButton;
     private JPanel EditarFilme;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JTextField textField6;
-    private JTextField textField7;
-    private JTextField textField8;
-    private JTextField textField9;
+
+    private JTextField textNewTitulo;
+    private JTextField textNewDescricao;
+    private JTextField textNewCaminho;
+    private JTextField textNewGenero;
+    private JTextField textNewIdioma;
+    private JTextField textNewDuracao;
+    private JTextField textNewAno;
+    private JTextField textNewDiretor;
+    private JTextField textNewAP;
+
     private JButton procurarButton;
     private JTextArea textArea1;
-    private JTextField textField10;
+
     private ArrayMidias array;
     Filme f;
 
@@ -42,15 +44,16 @@ public class EditarFilme extends JFrame {
                         //String novogenero = textField4.getText();
                         //String novoidioma = textField5.getText();
 
-                        textField2.getText(),
-                        textField3.getText(),
-                        textField4.getText(),
-                        textField5.getText(),
-                        textField6.getText(),
-                        textField7.getText(),
-                        textField8.getText(),
-                        textField9.getText(),
-                        textField10.getText()
+                        textNewTitulo.getText(),
+                        textNewDescricao.getText(),
+                        textNewCaminho.getText(),
+                        textNewGenero.getText(),
+                        textNewIdioma.getText(),
+                        textNewDuracao.getText(),
+                        textNewAno.getText(),
+                        textNewDiretor.getText(),
+                        textNewAP.getText()
+
                 );
 
                 array.editarMídia(f.getTitulo(), f);
@@ -83,7 +86,7 @@ public class EditarFilme extends JFrame {
                         textField7.getText(),
                         textField8.getText(),
                         textField9.getText(),
-                        textField10.getText()
+                        textNewDescricao.getText()
                 );
                 array.editarMídia(f.getTitulo(), f);
                 //resultado do campo

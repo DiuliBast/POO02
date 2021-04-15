@@ -5,16 +5,17 @@ import java.awt.event.MouseEvent;
 //organizar nomes textField...
 public class AdicionarFilme extends JFrame{
     private JLabel firstMainText;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JTextField textField6;
-    private JTextField textField7;
-    private JTextField textField8;
+    private JTextField textTitulo;
+    private JTextField textDescricao;
+    private JTextField textGenero;
+    private JTextField textIdioma;
+    private JTextField textDuracao;
+    private JTextField textAno;
+    private JTextField textDiretor;
+    private JTextField textAtoresPrincipais;
     private JPanel AdicionarFilme;
     private JButton OKButton;
+    private JTextField textCaminho;
     private ArrayMidias array;
 
     public AdicionarFilme(ArrayMidias array) {
@@ -23,7 +24,7 @@ public class AdicionarFilme extends JFrame{
         this.setSize(500, 400);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(AdicionarFilme);
-        this.pack();
+       // this.pack();
         this.array = array;
 
         OKButton.addMouseListener(new MouseAdapter() {
@@ -33,14 +34,15 @@ try{
 
                 Filme f = new Filme();
 
-               f.setTitulo(textField1.getText());
-               f.setDescricao(textField2.getText());
-               f.setGenero(textField3.getText());
-               f.setIdioma(textField4.getText());
-               f.setDuração(textField5.getText());
-               f.setAno(textField6.getText());
-               f.setDiretor(textField7.getText());
-               f.setAtoresPrincipais(textField8.getText());
+               f.setTitulo(textTitulo.getText());
+               f.setDescricao(textDescricao.getText());
+               f.setCaminho(textCaminho.getText());
+               f.setGenero(textGenero.getText());
+               f.setIdioma(textIdioma.getText());
+               f.setDuração(textDuracao.getText());
+               f.setAno(textAno.getText());
+               f.setDiretor(textDiretor.getText());
+               f.setAtoresPrincipais(textAtoresPrincipais.getText());
 
                 array.addMidia(f);
 
