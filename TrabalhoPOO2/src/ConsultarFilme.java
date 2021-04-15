@@ -13,7 +13,7 @@ public class ConsultarFilme extends JFrame {
     public ConsultarFilme(ArrayMidias array) {
 
         this.setTitle("Consulta de Filmes");
-        this.setSize(500, 400);
+        this.setSize(300, 700);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(ConsultarFilme);
         this.pack();

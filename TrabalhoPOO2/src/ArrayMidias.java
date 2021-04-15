@@ -42,38 +42,40 @@ public class ArrayMidias implements IMídia, Serializable {
         return null;
     }
 
-
     @Override
     public boolean editarMídia(String titulo, Mídia nova) {
 
-for(int a = 0; a < listMidias.size(); a++){
-    if(titulo.equalsIgnoreCase(listMidias.get(a).getTitulo())){
-        listMidias.set(a,nova);
-        return true;
-    }
-}
-throw new IllegalArgumentException("Midia não encontrada");
-
-            }
-
-
-
-        @Override
-        public boolean removeMídia (String titulo){
-            try {
-                for (Mídia m : listMidias) {
-                    if (m.getTitulo().equals(titulo)) {
-                        listMidias.remove(m);
-                        grava();
-                        return true;
-                    }
+        for (int a = 0; a < listMidias.size(); a++) {
+            if (titulo.equals(listMidias.get(a).getTitulo())) {
+                listMidias.set(a, nova);
+                try {
+                    grava();
+                    return true;
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-                return false;
+                //return true;
             }
+        }
+        throw new IllegalArgumentException("Midia não encontrada");
+    }
+
+    @Override
+    public boolean removeMídia(String titulo) {
+        try {
+            for (Mídia m : listMidias) {
+                if (m.getTitulo().equals(titulo)) {
+                    listMidias.remove(m);
+                    grava();
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
             return false;
         }
+        return false;
+    }
 
 
     @Override

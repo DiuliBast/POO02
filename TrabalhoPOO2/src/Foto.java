@@ -53,6 +53,7 @@ public class Foto extends Mídia implements Serializable {
 
     public String toString() {
         return  " " + "\n" +
+                " ------------- (FOTO) ------------- " + "\n" +
                 "Título = " + getTitulo() + "\n" +
                 "Descrição = " + getDescricao() + "\n" +
                 "Caminho = " + getCaminho() + "\n" +

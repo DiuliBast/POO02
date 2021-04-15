@@ -9,6 +9,7 @@ public class MenuFoto extends JFrame {
    // private JButton removerButton;
     private JLabel firstMainText;
     private JPanel menuFotoPanel;
+    private JButton sairButton;
     private ArrayMidias array;
 
     public MenuFoto(ArrayMidias array) {

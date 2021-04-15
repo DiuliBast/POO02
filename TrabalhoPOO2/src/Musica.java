@@ -28,6 +28,7 @@ public void setInterpretes(String interpretes){
 
     public String toString() {
         return  " " + "\n" +
+                " ------------- (MÚSICA) ----------- " + "\n" +
                 "Título = " + getTitulo() + "\n" +
                 "Descrição = " + getDescricao() + "\n" +
                 "Caminho = " + getCaminho() + "\n" +

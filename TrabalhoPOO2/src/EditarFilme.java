@@ -64,13 +64,12 @@ public class EditarFilme extends JFrame {
 
 
         procurarButton.addMouseListener(new MouseAdapter() {
-
             public void mouseClicked(MouseEvent e) {
 
                 String titulo = array.getMídia(textField1.getText()).toString();
                 textArea1.setText(titulo);
 
-                Filme f = new Filme(
+              /*  Filme f = new Filme(
                         //String novotitulo = textField2.getText();
                         //String novadescricao = textField3.getText();
                         //String novogenero = textField4.getText();
@@ -86,14 +85,13 @@ public class EditarFilme extends JFrame {
                         textField9.getText(),
                         textField10.getText()
                 );
-
                 array.editarMídia(f.getTitulo(), f);
                 //resultado do campo
                 System.out.println(f.getTitulo());
                 //System.out.println("midia alterada com sucesso");
                 JOptionPane.showMessageDialog(null,"Mídia editada com sucesso");
 
-
+*/
 
             }
         });

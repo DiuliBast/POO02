@@ -38,6 +38,7 @@ public class Filme extends AudioVisual implements Serializable, IMídia {
 
     public String toString() {
         return " " + "\n" +
+                " -------------- (FILME) -------------- " + "\n" +
                 "Título = " + getTitulo() + "\n" +
                 "Descrição = " + getDescricao() + "\n" +
                 "Caminho = " + getCaminho() + "\n" +

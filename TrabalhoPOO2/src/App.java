@@ -21,14 +21,14 @@ public class App extends JFrame {
     public App() {
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(800, 600);
+        this.setSize(500, 400);
         this.setContentPane(mainPanel);
 
         filmeButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = new MenuFilme(array);
-                frame.setSize(800, 600);
+                frame.setSize(500, 400);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
@@ -42,6 +42,7 @@ public class App extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = new MenuFoto(array);
+                frame.setSize(500, 400);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
@@ -54,6 +55,7 @@ public class App extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = new MenuMusica(array);
+                frame.setSize(500, 400);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
@@ -65,6 +67,7 @@ public class App extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = new ExibirMidias(array);
+                frame.setSize(500, 400);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
@@ -77,6 +80,7 @@ public class App extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = new RemoverMidia(array);
+                frame.setSize(500, 400);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);

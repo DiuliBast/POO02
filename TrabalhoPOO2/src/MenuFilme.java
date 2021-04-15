@@ -15,16 +15,17 @@ public class MenuFilme extends JFrame {
     public MenuFilme(ArrayMidias array) {
 
         this.setTitle("Menu de Filmes");
-        this.setSize(800, 600);
+        this.setSize(500, 400);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(menuFilmePanel);
-        this.pack();
+        //this.pack();
         this.array = array;
 
         adicionarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = new AdicionarFilme(array);
+                frame.setSize(500, 400);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
@@ -36,6 +37,7 @@ public class MenuFilme extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JFrame frame = new ConsultarFilme(array);
+                frame.setSize(500, 400);
                 frame.setVisible(true);
                 frame.pack();
                 frame.setLocationRelativeTo(null);
@@ -51,6 +53,7 @@ public class MenuFilme extends JFrame {
                 JFrame frame = null;
                 try {
                     frame = new EditarFilme(array);
+                    frame.setSize(500, 400);
                 } catch (Exception exception) {
                     exception.printStackTrace();
                 }
